@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Ninja to Cat</title>
+</head>
+<body>
+    <script>
+    function swapSources() {
+        // var tmp = $('img').attr('data-alt-src');
+        var tmp = $('img').attr('src');
+        console.log(tmp, tmp2);
+
+        // $('img').prop('data-alt-src', tmp2);
+        // $('img').prop('src', tmp);
+
+        // if img is one thing, the source is the opposite, else switch back?
+        // if src == img1
+        if( $('img').attr('src') == tmp) {
+        // src = img1
+            $('img').prop('src', $('img').attr('data-alt-src'));
+
+        } else {
+        // else src = img2
+            $('img').prop('src', tmp);
+        }
+    }
+
+        $(document).ready(function() {
+            $('img').click(function() {
+                $(this).prop(swapSources());
+            });
+
+
+
+
+        });
+    </script>
+    <img src="img/ninja0.png" data-alt-src="img/cat0.png" alt="Ninja 0 or Cat 0">
+    <img src="" alt="">
+    
+</body>
+</html>

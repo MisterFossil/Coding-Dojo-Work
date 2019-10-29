@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>JQuery Functions</title>
+    <style>
+        .experiments {
+            border-bottom: 5px solid black;
+            width: 300px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .secret {
+            display: none;
+            background-color: black;
+            color: white;
+        }
+
+        .secret-poser {
+            background-color: black;
+            color: white;
+        }
+
+        h3 {
+            font-family: "Comic Sans MS";
+            color: palevioletred;
+        }
+
+        .after h3 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $('.click button').click(function() {
+                $('.click *').css("background-color", "yellow");
+            });
+            $('.hide button:contains(Hide)').click(function() {
+                $('.hide h2').hide();
+            });
+            $('.show button:contains(Show)').click(function() {
+                $('.show h2').show();
+            });
+            $('.toggle button').click(function() {
+                $('.toggle h2').toggle("slow");
+            });
+            $('.slide-down button').click(function() {
+                $('.slide-down h2').slideDown("slow");
+            });
+            $('.slide-up button').click(function() {
+                $('.slide-up h2').slideUp(1000);
+            });
+            $('.slide-toggle button').click(function() {
+                $('.slide-toggle h2').slideToggle(500);
+            });
+            $('.fade-in button').click(function() {
+                $('.fade-in h2').fadeIn(2000);
+            });
+            $('.fade-out button').click(function() {
+                $('.fade-out h2').fadeOut(2000);
+            });
+            $('.add-class button').click(function() {
+                $('.add-class p, .add-class button').addClass("secret-poser");
+            });
+            $('.before button').click(function() {
+                $('.before h2, .before button').before("<h3>I'm new!</h3>");
+            });
+            $('.after button').click(function() {
+                $('.after h2, .after button').after("<h3>I'm new too!</h3>");
+            });
+            $('.append button').click(function() {
+                $('.append h2').append("end");
+            });
+            $('.html button').click(function() {
+                console.log($('.html').html());
+            });
+            $('.attr button').click(function() {
+                console.log($('.attr button').attr("button"));
+            });
+            $('.val button').click(function() {
+                console.log($('.val p').val());
+            });
+            $('.text button').click(function() {
+                console.log($('.text').text());
+            });
+
+
+
+        });
+    </script>
+    <div class="experiments click">
+        <h2>.click</h2>
+        <p>Click the button to add a yellow background to all elements in the click class</p>
+        <button>Click</button>
+    </div>
+    <div class="experiments hide show">
+        <h2>.hide & .show</h2>
+        <p>Click the button to hide the title and show the title</p>
+        <button>Hide</button>
+        <button>Show</button>
+    </div>
+    <div class="experiments toggle">
+        <h2>.toggle</h2>
+        <h2 class="secret">I have been toggled</h2>
+        <p>Click the button to toggle the visibility of the title</p>
+        <button>Toggle</button>
+    </div>
+    <div class="experiments slide-down">
+        <h2>.slideDown</h2>
+        <h2 class="secret">Super Secret Sliding Title!</h2>
+        <p>Click the button to slide the hidden title down</p>
+        <button>slideDown</button>
+    </div>
+    <div class="experiments slide-up">
+        <h2>.slideUp</h2>
+        <p>Click the button to slide the title up</p>
+        <button>slideUp</button>
+    </div>
+    <div class="experiments slide-toggle">
+        <h2>.slideToggle</h2>
+        <h2 class="secret">Super Secret Sliding Title! Part Deux!</h2>
+        <p>Click the button to slide between the secret title</p>
+        <button>slideToggle</button>
+    </div>
+    <div class="experiments fade-in">
+        <h2>.fadeIn</h2>
+        <h2 class="secret">Super Secret Fading Title!</h2>
+        <p>Click the button to fade in the secret title</p>
+        <button>fadeIn</button>
+    </div>
+    <div class="experiments fade-out">
+        <h2>.fadeOut</h2>
+        <p>Click the button to fade out the super bashful title</p>
+        <button>fadeOut</button>
+    </div>
+    <div class="experiments add-class">
+        <h2>.addClass</h2>
+        <p>Click the button to put all of the elements but the title into the "Secret Poser" class.</p>
+        <button>addClass</button>
+    </div>
+    <div class="experiments before">
+        <h2>.before</h2>
+        <p>Click the button to put a h3 element before the title and the button.</p>
+        <button>before</button>
+    </div>
+    <div class="experiments after">
+        <h2>.after</h2>
+        <p>Click the button to put a h3 element after the title and button.</p>
+        <button>after</button>
+    </div>
+    <div class="experiments append">
+        <h2>.app</h2>
+        <p>Click the button to append the rest of the title. (with a little extra if you want to get crazy)</p>
+        <button>append</button>
+    </div>
+    <div class="experiments html">
+        <h2>.html</h2>
+        <p>Click the button to get the contents of this div. (hint open the console).</p>
+        <button>html</button>
+        <!-- AHH! I'm normally not seen! -->
+    </div>
+    <div class="experiments attr">
+        <h2>.attr</h2>
+        <p>Click the button to get the button's attributes</p>
+        <button>attr</button>
+    </div>
+    <div class="experiments val">
+        <h2>.val</h2>
+        <p>Click the button to get the value of the p element.</p>
+        <button>val</button>
+    </div>
+    <div class="experiments text">
+        <h2>.text</h2>
+        <p>Click the button to get all the text of this div.</p>
+        <button>text</button>
+    </div>
+    
+</body>
+</html>

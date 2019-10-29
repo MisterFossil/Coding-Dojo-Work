@@ -1,0 +1,386 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\blufo> cd ./onedrive/documents/'coding dojo'
+PS C:\Users\blufo\onedrive\documents\coding dojo> ls
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/14/2019  11:18 AM                academy-ninja-master
+da---l       10/28/2019   9:38 AM                Algorithms
+da---l       10/18/2019  12:25 PM                CSS
+da---l       10/22/2019   8:40 PM                Git
+da---l       10/17/2019  10:02 AM                Homework
+da---l       10/15/2019   1:12 PM                HTML
+da---l       10/22/2019   4:59 PM                Javascript
+da---l       10/24/2019   8:40 AM                JQuery
+da---l       10/27/2019   4:00 PM                MySQL
+da---l       10/23/2019   1:31 PM                new_project
+da---l       10/28/2019  10:35 AM                Python
+-a---l       10/23/2019  11:28 AM             50 testing.js
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> mkdir python_stack
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:31 AM                python_stack
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> mkdir my_environments
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:31 AM                my_environments
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> mydir pyhton
+mydir : The term 'mydir' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ mydir pyhton
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (mydir:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> mkdir python
+mkdir : An item with the specified name C:\Users\blufo\onedrive\documents\coding dojo\python already exists.
+At line:1 char:1
++ mkdir python
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Users\blufo\...ing dojo\python:String) [New-Item], IOException
+    + FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> ls
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/14/2019  11:18 AM                academy-ninja-master
+da---l       10/28/2019   9:38 AM                Algorithms
+da---l       10/18/2019  12:25 PM                CSS
+da---l       10/22/2019   8:40 PM                Git
+da---l       10/17/2019  10:02 AM                Homework
+da---l       10/15/2019   1:12 PM                HTML
+da---l       10/22/2019   4:59 PM                Javascript
+da---l       10/24/2019   8:40 AM                JQuery
+da---l       10/27/2019   4:00 PM                MySQL
+da---l       10/28/2019  11:31 AM                my_environments
+da---l       10/23/2019   1:31 PM                new_project
+da---l       10/28/2019  10:35 AM                Python
+da---l       10/28/2019  11:31 AM                python_stack
+-a---l       10/23/2019  11:28 AM             50 testing.js
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> rm python_stack
+rm : C:\Users\blufo\onedrive\documents\coding dojo\python_stack is an NTFS junction point. Use the Force parameter to
+delete or modify this object.
+At line:1 char:1
++ rm python_stack
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\blufo\...jo\python_stack:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : DirectoryNotEmpty,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> cd python_stack
+cd : Cannot find path 'C:\Users\blufo\onedrive\documents\coding dojo\python_stack' because it does not exist.
+At line:1 char:1
++ cd python_stack
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\blufo\...jo\python_stack:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> ls
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/14/2019  11:18 AM                academy-ninja-master
+da---l       10/28/2019   9:38 AM                Algorithms
+da---l       10/18/2019  12:25 PM                CSS
+da---l       10/22/2019   8:40 PM                Git
+da---l       10/17/2019  10:02 AM                Homework
+da---l       10/15/2019   1:12 PM                HTML
+da---l       10/22/2019   4:59 PM                Javascript
+da---l       10/24/2019   8:40 AM                JQuery
+da---l       10/27/2019   4:00 PM                MySQL
+da---l       10/28/2019  11:31 AM                my_environments
+da---l       10/23/2019   1:31 PM                new_project
+da---l       10/28/2019  10:35 AM                Python
+-a---l       10/23/2019  11:28 AM             50 testing.js
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> mkdir python_stack
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:33 AM                python_stack
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo> cd python_stack
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> mkdir my_environments
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:34 AM                my_environments
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> mkdir python
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:34 AM                python
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> mkdir flask
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:34 AM                flask
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> mkdir django
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:34 AM                django
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> cd python
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python> mkdir fundamentals
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:34 AM                fundamentals
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python> mkdir OOP
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:34 AM                OOP
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python> ls
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:34 AM                fundamentals
+da---l       10/28/2019  11:34 AM                OOP
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python> cd ..
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> cd flask
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\flask> mkdir flask_fundamentals
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\flask
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:35 AM                flask_fundamentals
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\flask> mkdir flask_mysql
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\flask
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:35 AM                flask_mysql
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\flask> cd ..
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> ls
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:34 AM                django
+da---l       10/28/2019  11:35 AM                flask
+da---l       10/28/2019  11:34 AM                my_environments
+da---l       10/28/2019  11:34 AM                python
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> cd django
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django> mkdir django_intro
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:35 AM                django_intro
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django> mkdir django_orm
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:36 AM                django_orm
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django> mkdir django_full_stack
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:36 AM                django_full_stack
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django> ls
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       10/28/2019  11:36 AM                django_full_stack
+da---l       10/28/2019  11:35 AM                django_intro
+da---l       10/28/2019  11:36 AM                django_orm
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django> cd ..
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> get-children .
+get-children : The term 'get-children' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-children .
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-children:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> getchilditem .
+getchilditem : The term 'getchilditem' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ getchilditem .
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (getchilditem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> get-childitem .
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:36 AM                django
+da---l       10/28/2019  11:35 AM                flask
+da---l       10/28/2019  11:34 AM                my_environments
+da---l       10/28/2019  11:34 AM                python
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack> get-childitem . -recurse
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:36 AM                django
+da---l       10/28/2019  11:35 AM                flask
+da---l       10/28/2019  11:34 AM                my_environments
+da---l       10/28/2019  11:34 AM                python
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\django
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:36 AM                django_full_stack
+da---l       10/28/2019  11:35 AM                django_intro
+da---l       10/28/2019  11:36 AM                django_orm
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\flask
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:35 AM                flask_fundamentals
+da---l       10/28/2019  11:35 AM                flask_mysql
+
+
+    Directory: C:\Users\blufo\onedrive\documents\coding dojo\python_stack\python
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+da---l       10/28/2019  11:34 AM                fundamentals
+da---l       10/28/2019  11:34 AM                OOP
+
+
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack>
+PS C:\Users\blufo\onedrive\documents\coding dojo\python_stack>

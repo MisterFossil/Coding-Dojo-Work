@@ -1,0 +1,163 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\blufo> mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 22
+Server version: 8.0.18 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lead_gen_business  |
+| mysql              |
+| performance_schema |
+| sys                |
+| twitter            |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use twitter;
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_twitter |
++-------------------+
+| faves             |
+| follows           |
+| tweets            |
+| users             |
++-------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from tweets
+    -> ;
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+| id | tweet                                                                                                                                   | user_id | created_at          | updated_at          |
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+|  1 | There is power in understanding the journey of others to help create your own                                                           |       1 | 2002-02-01 00:00:01 | 2002-02-01 00:00:01 |
+|  2 | Congrats Coach K! Amazing accomplishment #1KforCoachK #Duke                                                                             |       1 | 2005-02-01 00:00:01 | 2005-02-01 00:00:01 |
+|  3 | This is what happens when I pass too much! #ShoulderShock thank u all for ur thoughts and prayers #team @DrinkBODYARMOR @Lakers #oneluv |       1 | 2004-02-01 00:00:01 | 2004-02-01 00:00:01 |
+|  4 | Feeling a mix of emotions I haven't felt in 18yrs of being a pro #journey #19th                                                         |       1 | 2012-02-01 00:00:01 | 2012-02-01 00:00:01 |
+|  5 | Thank you everyone for the birthday wishes. I appreciate you all.                                                                       |       2 | 2011-02-01 00:00:01 | 2011-02-01 00:00:01 |
+|  6 | I'd like to wish everyone a very Merry Christmas. 1 love to all "Be Safe"                                                               |       2 | 2009-02-01 00:00:01 | 2009-02-01 00:00:01 |
+|  7 | Thanks to all who helped with the Christmas food baskets today. Your time is greatly appreciated. Love & Respect!!                      |       2 | 2008-02-01 00:00:01 | 2008-02-01 00:00:01 |
+|  8 | I took on the ALS Challenge from Monta Ellis. I challenge @coolkesh42 Jameer Nelson, Dionne Calhoun ... http://tmi.me/1eFAxT            |       2 | 2003-02-01 00:00:01 | 2003-02-01 00:00:01 |
+|  9 | Well done lil bro, you deserve it!! @KingJames                                                                                          |       3 | 2006-02-01 00:00:01 | 2006-02-01 00:00:01 |
+| 10 | For my basketball clinic with @manilacone 11/4/14, we still have a few slots left for the main game. See you all 11/5/14 Philippines    |       3 | 2001-02-01 00:00:01 | 2001-02-01 00:00:01 |
+| 11 | Always have a great time with my big little brother.                                                                                    |       4 | 2011-02-01 00:00:01 | 2011-02-01 00:00:01 |
+| 12 | Happy Labor Day..                                                                                                                       |       4 | 2014-02-01 00:00:01 | 2014-02-01 00:00:01 |
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+12 rows in set (0.01 sec)
+
+mysql> insert into tweets(tweet,user_id,created_at,updated_at)  values("CRUD testing insert statement",3,now(),now());
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from tweets;
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+| id | tweet                                                                                                                                   | user_id | created_at          | updated_at          |
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+|  1 | There is power in understanding the journey of others to help create your own                                                           |       1 | 2002-02-01 00:00:01 | 2002-02-01 00:00:01 |
+|  2 | Congrats Coach K! Amazing accomplishment #1KforCoachK #Duke                                                                             |       1 | 2005-02-01 00:00:01 | 2005-02-01 00:00:01 |
+|  3 | This is what happens when I pass too much! #ShoulderShock thank u all for ur thoughts and prayers #team @DrinkBODYARMOR @Lakers #oneluv |       1 | 2004-02-01 00:00:01 | 2004-02-01 00:00:01 |
+|  4 | Feeling a mix of emotions I haven't felt in 18yrs of being a pro #journey #19th                                                         |       1 | 2012-02-01 00:00:01 | 2012-02-01 00:00:01 |
+|  5 | Thank you everyone for the birthday wishes. I appreciate you all.                                                                       |       2 | 2011-02-01 00:00:01 | 2011-02-01 00:00:01 |
+|  6 | I'd like to wish everyone a very Merry Christmas. 1 love to all "Be Safe"                                                               |       2 | 2009-02-01 00:00:01 | 2009-02-01 00:00:01 |
+|  7 | Thanks to all who helped with the Christmas food baskets today. Your time is greatly appreciated. Love & Respect!!                      |       2 | 2008-02-01 00:00:01 | 2008-02-01 00:00:01 |
+|  8 | I took on the ALS Challenge from Monta Ellis. I challenge @coolkesh42 Jameer Nelson, Dionne Calhoun ... http://tmi.me/1eFAxT            |       2 | 2003-02-01 00:00:01 | 2003-02-01 00:00:01 |
+|  9 | Well done lil bro, you deserve it!! @KingJames                                                                                          |       3 | 2006-02-01 00:00:01 | 2006-02-01 00:00:01 |
+| 10 | For my basketball clinic with @manilacone 11/4/14, we still have a few slots left for the main game. See you all 11/5/14 Philippines    |       3 | 2001-02-01 00:00:01 | 2001-02-01 00:00:01 |
+| 11 | Always have a great time with my big little brother.                                                                                    |       4 | 2011-02-01 00:00:01 | 2011-02-01 00:00:01 |
+| 12 | Happy Labor Day..                                                                                                                       |       4 | 2014-02-01 00:00:01 | 2014-02-01 00:00:01 |
+| 15 | CRUD testing insert statement                                                                                                           |       3 | 2019-10-27 15:43:27 | 2019-10-27 15:43:27 |
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+13 rows in set (0.00 sec)
+
+mysql> update tweets
+    -> set tweet = "CRUD tessting update statment"
+    -> where id = 6;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from tweets;
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+| id | tweet                                                                                                                                   | user_id | created_at          | updated_at          |
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+|  1 | There is power in understanding the journey of others to help create your own                                                           |       1 | 2002-02-01 00:00:01 | 2002-02-01 00:00:01 |
+|  2 | Congrats Coach K! Amazing accomplishment #1KforCoachK #Duke                                                                             |       1 | 2005-02-01 00:00:01 | 2005-02-01 00:00:01 |
+|  3 | This is what happens when I pass too much! #ShoulderShock thank u all for ur thoughts and prayers #team @DrinkBODYARMOR @Lakers #oneluv |       1 | 2004-02-01 00:00:01 | 2004-02-01 00:00:01 |
+|  4 | Feeling a mix of emotions I haven't felt in 18yrs of being a pro #journey #19th                                                         |       1 | 2012-02-01 00:00:01 | 2012-02-01 00:00:01 |
+|  5 | Thank you everyone for the birthday wishes. I appreciate you all.                                                                       |       2 | 2011-02-01 00:00:01 | 2011-02-01 00:00:01 |
+|  6 | CRUD tessting update statment                                                                                                           |       2 | 2009-02-01 00:00:01 | 2009-02-01 00:00:01 |
+|  7 | Thanks to all who helped with the Christmas food baskets today. Your time is greatly appreciated. Love & Respect!!                      |       2 | 2008-02-01 00:00:01 | 2008-02-01 00:00:01 |
+|  8 | I took on the ALS Challenge from Monta Ellis. I challenge @coolkesh42 Jameer Nelson, Dionne Calhoun ... http://tmi.me/1eFAxT            |       2 | 2003-02-01 00:00:01 | 2003-02-01 00:00:01 |
+|  9 | Well done lil bro, you deserve it!! @KingJames                                                                                          |       3 | 2006-02-01 00:00:01 | 2006-02-01 00:00:01 |
+| 10 | For my basketball clinic with @manilacone 11/4/14, we still have a few slots left for the main game. See you all 11/5/14 Philippines    |       3 | 2001-02-01 00:00:01 | 2001-02-01 00:00:01 |
+| 11 | Always have a great time with my big little brother.                                                                                    |       4 | 2011-02-01 00:00:01 | 2011-02-01 00:00:01 |
+| 12 | Happy Labor Day..                                                                                                                       |       4 | 2014-02-01 00:00:01 | 2014-02-01 00:00:01 |
+| 15 | CRUD testing insert statement                                                                                                           |       3 | 2019-10-27 15:43:27 | 2019-10-27 15:43:27 |
++----+-----------------------------------------------------------------------------------------------------------------------------------------+---------+---------------------+---------------------+
+13 rows in set (0.00 sec)
+
+mysql> delete from tweets where id = 10;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`twitter`.`faves`, CONSTRAINT `fk_faves_tweets1` FOREIGN KEY (`tweet_id`) REFERENCES `tweets` (`id`))
+mysql> show users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users' at line 1
+mysql> select * from users;
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+| id | first_name | last_name | handle          | birthday   | created_at          | updated_at          |
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+|  1 | Kobe       | Bryant    | kobebryant      | 1978-08-23 | 2010-02-01 00:00:01 | 2011-07-01 00:00:01 |
+|  2 | Vince      | Carter    | mrvincecarter15 | 1977-01-26 | 2007-08-11 00:00:01 | 2010-01-01 00:00:01 |
+|  3 | Allen      | Iverson   | alleniverson    | 1975-06-07 | 2005-09-01 00:00:01 | 2011-04-21 00:00:01 |
+|  4 | Tracy      | McGrady   | Real_T_Mac      | 1979-05-24 | 2002-12-01 00:00:01 | 2005-11-21 00:00:01 |
+|  5 | Rajon      | Rondo     | RajonRondo      | 1986-02-22 | 2001-02-01 00:00:01 | 2002-01-01 00:00:01 |
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into users(first_name,last_name,handle,birthday,created_at,updated_at)
+    -> values("jonathan","seastedt","MisterFossil","2007-07-19",now(),now());
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+| id | first_name | last_name | handle          | birthday   | created_at          | updated_at          |
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+|  1 | Kobe       | Bryant    | kobebryant      | 1978-08-23 | 2010-02-01 00:00:01 | 2011-07-01 00:00:01 |
+|  2 | Vince      | Carter    | mrvincecarter15 | 1977-01-26 | 2007-08-11 00:00:01 | 2010-01-01 00:00:01 |
+|  3 | Allen      | Iverson   | alleniverson    | 1975-06-07 | 2005-09-01 00:00:01 | 2011-04-21 00:00:01 |
+|  4 | Tracy      | McGrady   | Real_T_Mac      | 1979-05-24 | 2002-12-01 00:00:01 | 2005-11-21 00:00:01 |
+|  5 | Rajon      | Rondo     | RajonRondo      | 1986-02-22 | 2001-02-01 00:00:01 | 2002-01-01 00:00:01 |
+|  7 | jonathan   | seastedt  | MisterFossil    | 2007-07-19 | 2019-10-27 15:49:09 | 2019-10-27 15:49:09 |
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> delete from users where id=7;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+| id | first_name | last_name | handle          | birthday   | created_at          | updated_at          |
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+|  1 | Kobe       | Bryant    | kobebryant      | 1978-08-23 | 2010-02-01 00:00:01 | 2011-07-01 00:00:01 |
+|  2 | Vince      | Carter    | mrvincecarter15 | 1977-01-26 | 2007-08-11 00:00:01 | 2010-01-01 00:00:01 |
+|  3 | Allen      | Iverson   | alleniverson    | 1975-06-07 | 2005-09-01 00:00:01 | 2011-04-21 00:00:01 |
+|  4 | Tracy      | McGrady   | Real_T_Mac      | 1979-05-24 | 2002-12-01 00:00:01 | 2005-11-21 00:00:01 |
+|  5 | Rajon      | Rondo     | RajonRondo      | 1986-02-22 | 2001-02-01 00:00:01 | 2002-01-01 00:00:01 |
++----+------------+-----------+-----------------+------------+---------------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql>

@@ -1,0 +1,221 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* outline: 1px dotted red; */
+}
+
+/* trying to insert some basic classes for reusability */
+.orange {
+    color: #ee7f2c;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.times {
+    font-family: 'Times New Roman', Times, serif;
+}
+/* End basic classes */
+
+/* IDs for specific element */
+#current-page {
+    color: white;
+}
+/* End IDs */
+
+.landing {
+    width: 1000px;
+    margin: 0px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color:#1a1a1a;
+    color: white;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header img {
+    width: 250px;
+}
+
+header p {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    margin-left: 561px;
+}
+
+nav ul {
+    padding: 5px 20px;
+    background-image: linear-gradient(#565656, #1f1f1f);
+}
+
+nav li {
+    display: inline-block;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+nav li:first-child {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+nav ul li:not(:first-child){
+    border-left: 3px solid #414141;
+    padding: 10px 20px;
+}
+
+nav ul li:last-child{
+    padding-right: 280px;
+    border-right: 3px solid #414141;
+}
+
+nav ul li a {
+    color: #a2a2a2;
+}
+
+nav img {
+    width: 100%;    
+    border-bottom: 5px solid #3b3b3b;
+}
+
+.content {
+    padding-left: 5px;
+    display: inline-block;
+}
+
+.content img{
+    vertical-align: top;
+}
+
+.qualities {
+    background-color: #1a1a1a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.con-descrip {
+    width: 179px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.con-descrip h3 {
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+
+.con-descrip p {
+    font-size: .8rem;
+}
+
+.advertisement {
+    background: repeating-linear-gradient( 
+        135deg,
+        rgb(44, 44, 44),
+        rgb(44, 44, 44), 
+        black 2px, 
+        black 2px);
+    padding: 20px;
+}
+
+.advertisement h2 {
+    font-weight: lighter;
+    margin-bottom: 10px;
+
+}
+
+.advertisement p {
+    font-size: .9rem;
+    color: #a2a2a2;
+}
+
+.advertisement button {
+    padding: 10px 20px;
+    vertical-align: top;
+    margin-top: 35px;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-image: linear-gradient(#f7c099, #ef7f2e);
+    color: white;
+    font-weight: bold;
+}
+
+.advertisement .advert-info {
+    display: inline-block;
+    width: 600px;
+    padding: 20px;
+    margin-right:150px;
+}
+
+.portfolio {
+    background-image: linear-gradient(#333333, #1a1a1a);
+    padding: 20px;
+}
+
+.portfolio header {
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.portfolio header h3 {
+    font-weight: normal;
+    display: inline-block;
+}
+
+.portfolio header p {
+    font-style: italic;
+    font-size: .7rem;
+    font-weight: lighter;
+    vertical-align: bottom;
+    margin-left: 785px;
+    width: 103px;
+}
+
+.portfolio header p a {
+    vertical-align: top;
+}
+
+.folios {
+    width: 228px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.folios:last-child {
+    margin-right: 0;
+}
+
+.folios img {
+    border: 5px solid #575757;
+    width: 96%;
+}
+
+.folios h4 {
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
+.folios h4 a{
+    color: #ee7f2c;
+    text-decoration: none;
+}
+
+.folios p {
+    font-size: .6rem;
+}
+
+.landing h6 a{
+    margin-left: 915px;
+    color: #494949;
+}
+
+

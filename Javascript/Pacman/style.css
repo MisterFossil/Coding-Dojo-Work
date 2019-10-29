@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+    font-size: 0;
+    margin: 0px;
+}
+
+div.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+div.brick {
+    background-color: blue;
+    /* border-radius: 5px; */
+}
+
+div.coin {
+    background: url(img/coin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+div.cherry {
+    background: url(img/cherry.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* div.empty {
+    code goes here
+} */
+
+div#pacman {
+    background: url(img/pacman.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+div#ghost {
+    background: url(img/ghost.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+div#score {
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: "Comic Sans MS";
+    display: inline-block;
+}
+
+div#lives {
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: "Comic Sans MS";
+    display: inline-block;
+}

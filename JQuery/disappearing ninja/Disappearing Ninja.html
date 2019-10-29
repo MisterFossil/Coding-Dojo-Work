@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disappearing Ninjas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+            $('.revive').click(function() {
+                $('.ninjas img').css("display","inline");
+            });
+
+            $('img').click(function() {
+                $(this).toggle("slow");
+            });
+
+        });    
+    </script>
+    <div class="ninjas">
+        <img src="img/hk.jpg" alt="hollow knight" class="hk">
+        <img src="img/hk.jpg" alt="hollow knight">
+        <img src="img/hk.jpg" alt="hollow knight">
+        <img src="img/hk.jpg" alt="hollow knight">
+    </div>
+    <div class="ninjas">
+        <img src="img/hk.jpg" alt="hollow knight">
+        <img src="img/hk.jpg" alt="hollow knight">
+        <img src="img/hk.jpg" alt="hollow knight">
+        <img src="img/hk.jpg" alt="hollow knight">
+    </div>
+    <button class="revive">Revive Ninjas</button>
+
+
+    
+</body>
+</html>

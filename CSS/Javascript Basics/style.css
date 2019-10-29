@@ -1,0 +1,71 @@
+*{
+    /*  The margin and padding was messing with the bullet points, porbably not enough room to display them with 0 margin*/
+    margin: 0 auto;
+    color: #c2d6ec;
+}
+.background {
+    background-color: #1b335d;
+    width: 970px;
+    margin: 0px 5px 5px;
+    padding: 5px;
+}
+
+nav {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: #2a7d8c;
+    display: inline-block;
+    vertical-align: top;
+}
+
+article {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: #0e1822;
+    display: inline-block;
+    width: 721px;
+}
+
+article p {
+    margin-left: 10px;
+}
+
+article li {
+    margin: 10px;
+}
+
+h1 {
+    margin: 10px 5px;
+    border-radius: 20px;
+    display: block;
+    padding: 10px;
+    background-color: #cf3036;
+}
+
+h2 {
+    margin: 10px;
+}
+
+a {
+    color: #65dae4;
+    text-decoration-line: underline;
+}
+
+footer {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #5d6673;
+}
+
+em {
+    font-style: normal;
+    color: #7d8df9;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}

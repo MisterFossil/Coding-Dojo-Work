@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>A Sample Registration Form</title>
+    </head>
+    <body>
+        <form>
+            <h2>My Registration Form</h2>
+
+            <label for='first_name'>First Name:</label>
+            <input type='text' id='first_name' name='first_name'> 
+            <p></p>
+
+            <!-- I'm not really sure if the above or below is correct for making a new line in HTML so my page doesn't have a bunch of inputs strung together. I guess I could also put it into a table? -->
+            <p>
+                <label for='last_name'>Last Name:</label>
+                <input type='text' id='last_name' name='last_name'>
+            </p>
+
+            <label for='email'>Email:</label>
+            <input type='text' id='email' name='email'>
+            <p></p>
+
+            <label for='password'>Password:</label>
+            <input type='password' id="password" name="password">
+            <p></p>
+
+            <label for="pw_confirm">PW Confirm:</label>
+            <input type="password" id="pw_confirm" name="pw_confirm">
+            <p></p>
+
+            <label for="birthday">birthday</label>
+            <input type="date" id="birthday" name="birthday">
+            <p></p>
+
+            <input type="radio" id="male" name="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="other">
+            <label for="other">Other</label>
+            
+            <p>A short description about yourself:</p>
+            <textarea name="description"></textarea>
+
+            <p>Favorite Language:
+
+                <select name="language">
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                    <option value="python">Python</option>
+                </select>   
+            </p>
+
+            <input type="submit" value="Submit!">
+        </form>
+    </body>
+</html>
