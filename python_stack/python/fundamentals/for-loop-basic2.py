@@ -84,9 +84,11 @@ print(ultimateAnalysis([37,2,1,-9]))
 # 2 - Reverse list
 def reverseList(aList):
     for x in range(len(aList)//2):
-        tmp = aList[x]
-        aList[x] = aList[-1-x]
-        aList[-1-x] = tmp
+        # tmp = aList[x]
+        # aList[x] = aList[-1-x]
+        # aList[-1-x] = tmp
+        # Refactored form above after learning this exists in python
+        aList[x], aList[-1-x] = aList[-1-x], aList[x]
     return aList
 
 print(reverseList([37,2,1,-9,5]))

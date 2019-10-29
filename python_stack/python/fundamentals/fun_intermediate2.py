@@ -11,16 +11,16 @@ sports_directory = {
 z = [ {'x': 10, 'y': 20} ]
 # 1 - Change the value 10 in x to 15. Once you're done, x should now be [[5,2,3],[15,8,9]]
 x[1][0] = 15
-# print(x)
+print(x)
 # 2 - Change the last_name of the first student from 'Jordan' to 'Bryant'
 students[0]['last_name'] = 'Bryant'
-# print(students)
+print(students)
 # 3 - In the sports_directory,  change 'Messi' to 'Andres'
 sports_directory['soccer'][0] = 'Andres'
-# print(sports_directory)
+print(sports_directory)
 # 4 - Change the value 20 in z to 30
 z[0]['y'] = 30
-# print(z)
+print(z)
 
 # Iterate Through a List of Dictionaries
 students = [
@@ -36,8 +36,32 @@ def iterateDictionary(some_list):
             print(key, '-', value +', ', end="")
         print()
 
-# iterateDictionary(students)
+iterateDictionary(students)
 
 # Get Values From a List of Dictionaries
 def iterateDictionary2(key_name, some_list):
-    pass
+    # given a list of dictionaries 
+    for item in some_list:
+    # use the the key in a dictionary
+    # print the value associated with the key
+        print(item[key_name])
+
+iterateDictionary2('last_name',students)
+
+# Iterate through a Dictionary with List Values
+dojo = {
+   'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+   'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
+
+def printInfo(some_dict):
+    # given a dicitonary whose values are all lists
+    for keys, values in some_dict.items():
+    # print the name of each key along with the size of its list
+        print(len(values), keys.upper())
+    # print the associated values within each key's list
+        for val in values:
+            print(val)
+        print()
+
+printInfo(dojo)
