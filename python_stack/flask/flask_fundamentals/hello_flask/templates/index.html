@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my_style_sheet.css') }}" type="text/css">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
     <title>Hello Flask</title>
 </head>
 <body>
     <h1>Hello Flask!</h1>
+    <h3>My Flask Template</h3>
+    <p>Phrase: {{ phrase }}</p>
+    <p>Times: {{ times }}</p>
+
+    {% for x in range(0,times): %}
+        <p>{{ phrase }}</p>
+    {% endfor %}
+
+    {% if phrase == 'hello' %}
+        <p>The phrase says hello</p>
+    {% endif %}
 </body>
 </html>

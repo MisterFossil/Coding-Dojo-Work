@@ -1,0 +1,21 @@
+.container {
+    /* width: 1000px; */
+    margin: 0 auto;
+    font-size: 0;
+}
+
+
+
+.box1 {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    display: inline-block;
+}
+
+.box2 {
+    width: 25px;
+    height: 25px;
+    background-color: blue;
+    display: inline-block;
+}
