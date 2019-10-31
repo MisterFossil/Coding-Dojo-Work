@@ -17,11 +17,23 @@ def disp_name(name):
     nameStr = 'Hi ' + name.title() + "!"
     return nameStr
 
-@app.route('/repeat/<num>/<repStr>')
+@app.route('/repeat/<int:num>/<repStr>')
 def repeat(num, repStr):
     repeatThis = repStr * int(num) 
     return repeatThis
 
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+# OR @app.errorhandler(error num code goes here)
+# Error Codes:
+# 404 - Not Found
+# 403 - Forbidden
+# 410 - Gone
+# 500 - Internal Server Error
+def wrongPage(path):
+    return "Sorry! No response. Try again"
+
 
 # Forgot this the first time
-app.run(debug=True)
+if __name__=="__main__":
+    app.run(debug=True)

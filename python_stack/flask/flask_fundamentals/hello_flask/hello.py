@@ -1,8 +1,10 @@
-from flask import Flask   # Import Flask to allow us to create our app
+from flask import Flask, render_template  # Import Flask to allow us to create our app, render_template is required to have flask display HTML files
 app = Flask(__name__)     # Create a new instance of the Flask class called "app"
+
+
 @app.route('/')           # The "@" decorator associates this route with the function immediately following
 def hello_world():
-    return 'Hello World!' # Return the string 'Hello World!' as a response
+    return render_template('index.html') # Formerly returned a string, now it returns the html file index.html
 
 @app.route('/success')    # THe route may need to be declared IMMEDIATELY before the function you want to associate with the route
 def success():
