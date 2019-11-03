@@ -1,0 +1,19 @@
+<h1>Counter:</h1>
+<p>{{counter}} times</p>
+<p>{{actual}} actual visits</p>
+
+<!-- <a href="/destroy_session">reset counter </a> -->
+<!-- <a href="/plus2">plus 2 counter</a> -->
+
+<form action="/destroy_session" method="post">
+    <button name="reset" value="True">Reset Counter</button>
+</form>
+
+<form action="/plus2" method="post">
+    <button name="plus2" value="True">+2 to Counter</button>
+</form>
+
+<form action="/incX" method="post">
+    <p>How much to increment?: <input type="number" name="howmuch">
+    <input type="submit" value="Submit"></p>
+</form>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
+    <title>Dojo Survey Landing</title>
+</head>
+<body>
+    <div class="container">
+        <h2>We Want Your Opinion!</h2>
+        <form action="/result" method="post">
+            <p>Your Name: <input type="text" name="name"></p>
+            <p>Dojo Location: <select name="location">
+                <option value="Arlington">Arlington</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+            </select></p>
+            <p>Favorite Language: <select name="language">
+                <option value="Python">Python</option>
+                <option value="csharp">C#</option>
+                <option value="basic">Basic</option>
+                <option value="cobol">COBOL</option>
+            </select></p>
+            <p>
+                What are your goals?
+                Web Dev<input type="radio" name="goals" value="Web Dev">
+                Back End<input type="radio" name="goals" value="Back End">
+                Full Stack<input type="radio" name="goals" value="Full Stack">
+            </p>
+            <ul>
+                How did you hear about us?
+                <li><input type="checkbox" name="source" value="friend">Friend</li>
+                <li><input type="checkbox" name="source">Family</li>
+                <li><input type="checkbox" name="source">Newspaper</li>
+                <li><input type="checkbox" name="source">Internet</li>
+
+            </ul>
+            <p>Comment (optional):</p>
+            <textarea name="comment" cols="30" rows="5">
+    
+            </textarea>
+            <p><input type="submit" value="Submit"></p>        
+        </form>
+
+
+    </div>
+</body>
+</html>
