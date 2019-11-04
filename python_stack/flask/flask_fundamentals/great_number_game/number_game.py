@@ -16,12 +16,7 @@ def numberGame():
     if 'win' not in session:
         session['win'] = False
 
-    if session['win']:
-        session['win'] = False
-        guesses = session['numGuesses']
-        session['numGuesses'] = 0
-
-    return render_template('index.html', result = session['result'], numGuess = guesses)
+    return render_template('index.html', result = session['result'], numGuess = session['numGuesses'], win = session['win'])
 
 @app.route('/guess', methods=['post'])
 def guess():
@@ -41,6 +36,14 @@ def guess():
         session['result'] = 'Too low'
 
     session['numGuesses'] += 1
+
+    return redirect('/')
+
+@app.route('/again', methods=['post'])
+def playAgain():
+    session['win'] = False
+    session['numGuesses'] = 0
+    session['result'] = ""
 
     return redirect('/')
 

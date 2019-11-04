@@ -11,15 +11,25 @@
     <p>I am thinking of a number between 1 and 100</p>
     <p>Take a guess!</p>
 
-    <p>{{result}}</p>
-    {% if result == 'You win!'%}
-    <p>It took you {{numGuess}} guesses</p>
-    {% endif %}
+    <p>
+        {% if not win%}
+            {{result}}
+        {% else %}
+            {{result}}<br>
+            It took you {{numGuess}} guesses
+        {% endif %}
+    </p>
 
-    <form action="/guess" method="post">
-        <input type="number" name="guess">
-        <input type="submit" value="submit">
-    </form>
+    {% if not win %}
+        <form action="/guess" method="post">
+            <input type="number" name="guess">
+            <input type="submit" value="submit">
+        </form>
+    {%  else %}
+        <form action="/again" method="post">
+            <button>Play Again?</button>
+        </form>
+    {% endif %}
     
 </body>
 </html>

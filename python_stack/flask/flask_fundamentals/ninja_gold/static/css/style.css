@@ -1,0 +1,34 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.location {
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    margin: 20px;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+.activities textarea {
+    width: 98%;
+}
+
+.faketext {
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.earn {
+    color: green;
+}
+
+.lost {
+    color: red;
+}
