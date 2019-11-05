@@ -1,4 +1,4 @@
-"""first_project URL Configuration
+"""ninja_gold URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -13,16 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url #importing url from django.conf.urls to use parameters with paths
-from first_app import views
+from ninja_app import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.index),
-    path('new', views.new),
-    path('create', views.create),
-    url(r'^(?P<number>\d+)$', views.show), # added the +, originally it only showed placeholder blogs 0-9
-    # path('<int:number>', views.show),
-    path('<int:number>/edit', views.edit),
-    path('<int:number>/delete', views.destroy),
+    path('process_money', views.process_money),
 ]

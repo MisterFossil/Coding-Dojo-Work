@@ -1,0 +1,13 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+}
+
+.timebox {
+    border: 2px solid black;
+    width: 250px;
+    margin: 0 375px;
+}

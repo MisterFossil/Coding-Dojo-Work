@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'time_app/css/style.css' %}">
+    <title>Time Display</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Date & Time:</h1>
+        <div class="timebox">
+            <h3>{{date}}</h3>
+            <h3>{{time}}</h3>
+        </div>
+
+    </div>
+    
+</body>
+</html>

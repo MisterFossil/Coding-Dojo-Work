@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ninja_app/css/style.css' %}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div class="container">
+        <div class="gold">
+            <h2>Your Gold:</h2>
+            <h2>{{request.session.gold}}</h2>
+        </div>
+
+        <div class="gold_loc">
+            <form action="/process_money" method="post" class="locations">
+                {% csrf_token %}
+                <input type="hidden" name="location" value="farm">
+                <h4>Farm</h4>
+                <h5>(earns 10-20 gold)</h5>
+                <button type="submit">Find Gold!</button>
+            </form>
+            <form action="/process_money" method="post" class="locations">
+                {% csrf_token %}
+                <input type="hidden" name="location" value="cave">
+                <h4>Cave</h4>
+                <h5>(earns 5-10 gold)</h5>
+                <button type="submit">Find Gold!</button>
+            </form>
+            <form action="/process_money" method="post" class="locations">
+                {% csrf_token %}
+                <input type="hidden" name="location" value="house">
+                <h4>House</h4>
+                <h5>(earns 2-5 gold)</h5>
+                <button type="submit">Find Gold!</button>
+            </form>
+            <form action="/process_money" method="post" class="locations">
+                {% csrf_token %}
+                <input type="hidden" name="location" value="casino">
+                <h4>Casino</h4>
+                <h5>(earns/takes 0-50 gold)</h5>
+                <button type="submit">Find Gold!</button>
+            </form>
+        </div>
+
+        <div class="activities">
+            <h3>Activities:</h3>
+            <div class="faketext">
+                    {% for activity in request.session.activity reversed %}
+                    {{activity|safe}}                        
+                    {% endfor %}
+            </div>
+        </div>
+
+        <form action="/process_money" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="location" value="reset">
+            <button type="submit">Reset the Game!</button>
+        </form>
+    </div>
+</body>
+</html>
