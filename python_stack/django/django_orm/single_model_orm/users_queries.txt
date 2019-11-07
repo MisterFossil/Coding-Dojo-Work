@@ -1,0 +1,52 @@
+(djangopy3env) PS C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\django\django_orm\single_model_orm> python manage.py shell                                                         Python 3.8.0 (tags/v3.8.0:fa919fd, Oct 14 2019, 19:37:50) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+
+Run a shell & Import User model 
+>>> from single_app.models import *
+
+Create 3 new users
+>>> Users.objects.create(first_name = "Jon", last_name = "Seastedt", email_address = "seastedt.ej@gmail.com", age = 34)
+<Users: Users object (1)>
+>>> Users.objects.create(first_name = "Osmosis", last_name = "Jones", email_address = "fakeemail_1@gmail.com", age = 25)
+<Users: Users object (2)>
+>>> Users.objects.create(first_name = "Peter", last_name = "Parker", email_address = "spiderfan8564@gmail.com", age = 25)
+<Users: Users object (3)>
+
+
+Retrieve all users
+>>> all_users = Users.objects.all()
+
+First User
+>>> user_1 = Users.objects.first()
+
+Last User
+>>> user_2 = Users.objects.last()
+
+Change the user with id=3 so their last_name is Pancakes
+>>> c = Users.objects.get(id=3)
+>>> c.last_name = "Pancakes"
+>>> c.save()
+>>> all_users = Users.objects.all()
+>>> for user in all_users:
+...     print(user.last_name)
+...
+Seastedt
+Jones
+Pancakes
+
+Deelte the user with id=2
+>>> c = Users.objects.get(id=2)
+>>> c
+<Users: Users object (2)>
+>>> c.delete()
+(1, {'single_app.Users': 1})
+
+Get all users, sorted by their first anem
+>>> Users.objects.all().order_by('first_name')
+<QuerySet [<Users: Users object (1)>, <Users: Users object (3)>]>
+
+Bonus: get all users, sorted by their first name in descending order
+>>> Users.objects.all().order_by('-first_name')
+<QuerySet [<Users: Users object (3)>, <Users: Users object (1)>]>
+>>>    
