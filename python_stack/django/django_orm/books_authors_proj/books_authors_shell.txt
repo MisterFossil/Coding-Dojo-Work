@@ -1,0 +1,261 @@
+Create 5 Books
+>>> Book.object.create(title = 'C Sharp', desc = 'A primer on the C Sharp computer programming language')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'object'
+>>> Book.objects.create(title = 'C Sharp', desc = 'A primer on the C Sharp computer programming language')
+<Book: Book object (1)>
+>>> Book.objects.create(title='Java', desc = 'Java programming language made easy!')
+<Book: Book object (2)>
+>>> Book.objects.create(title='Python', desc='Learning Python the Hard Way. Now with more examples!')
+<Book: Book object (3)>
+>>> Book.objects.create(title='PHP', desc='It's for the web! I really don't know much about PHP')
+  File "<console>", line 1
+    Book.objects.create(title='PHP', desc='It's for the web! I really don't know much about PHP')
+                                              ^
+SyntaxError: invalid syntax
+>>> Book.objects.create(title='PHP', desc="It's for the web! I really don't know much about PHP")
+<Book: Book object (4)>
+>>> Book.objects.create=(title='Ruby', desc='Not only for fingers, you can program computers with them!')
+  File "<console>", line 1
+    Book.objects.create=(title='Ruby', desc='Not only for fingers, you can program computers with them!')
+                              ^
+SyntaxError: invalid syntax
+>>> Book.objects.create(title='Ruby', desc='Not only for fingers, you can program computers with them!')
+<Book: Book object (5)>
+>>>                     
+
+Create 5 Authors
+>>> Author.objects.create(first_name='Jane',last_name='Austen')
+<Author: Author object (1)>
+>>> Author.objects.create(first_name='Emily',last_name='Dickinson')
+<Author: Author object (2)>
+>>> Author.objects.create(first_name='Fyodor', last_name='Dostoevsky')
+<Author: Author object (3)>
+>>> Author.objects.create(first_name='William',last_name='Shakespeare')
+<Author: Author object (4)>
+>>> Author.objects.create(first_name='Lau',last_name='Tzu')
+<Author: Author object (5)>
+>>>                  
+
+Add a new text field in the authors table called notes/ Create and Run Migration Files to update the table in your database
+(djangoPy3Env) PS C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\django\django_orm\books_authors_proj> python manage.py makemigrations       You are trying to add a non-nullable field 'notes' to author without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> 'TODO: Update with a description'
+Migrations for 'books_authors_app':
+  books_authors_app\migrations\0002_author_notes.py
+    - Add field notes to author
+(djangoPy3Env) PS C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\django\django_orm\books_authors_proj> python manage.py makemigrations       You are trying to add a non-nullable field 'notes' to author without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> 'TODO: Update with a description'
+Migrations for 'books_authors_app':
+  books_authors_app\migrations\0002_author_notes.py
+    - Add field notes to author
+
+Change the name of the C Sharp book to C#
+>>> book = Book.objects.get(title='C Sharp')
+>>> book.title
+'C Sharp'
+>>> book.title = 'C#'
+>>> book.title
+'C#'
+>>> save()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'save' is not defined
+>>> book.save()
+
+Change the first name of the 4th author to Bill
+>>> author = Author.objects.get(id=4)
+>>> author.first_name
+'William'
+>>> author.first_name = 'Bill'
+>>> author.first_name
+'Bill'
+>>> author.save()
+>>>       
+
+Assign the first Author to the first 2 books
+>>> book_grp = Books.objects.filter(id=1,2)
+  File "<console>", line 1
+SyntaxError: positional argument follows keyword argument
+>>> book_grp = Books.objects.filter(id=1 or 2)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Books' is not defined
+>>> book_grp = Books.objects.filter(id__range=[1,2])
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Books' is not defined
+>>> book_grp = Book.objects.filter(id__range=[1,2])
+>>> book_grp
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>]>
+>>> author = Author.objects.first()
+>>> author.books.add(book_grp)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\related_descriptors.py", line 936, in add
+    self._add_items(
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1061, in _add_items
+    vals = (self.through._default_manager.using(db)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\query.py", line 1116, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\lookups.py", line 20, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\related_lookups.py", line 59, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\related_lookups.py", line 59, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py", line 972, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'QuerySet'
+>>> for book in book_grp:
+...     author.books.add(book)
+...
+>>> author.books
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x000002815B554E20>
+>>> author.books.values()
+<QuerySet [{'id': 1, 'title': 'C#', 'desc': 'A primer on the C Sharp computer programming language', 'created_at': datetime.datetime(2019, 11, 8, 16, 27, 3, 899221, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 11, 8, 16, 47, 14, 546565, tzinfo=<UTC>)}, {'id': 2, 'title': 'Java', 'desc': 'Java programming language made easy!', 'created_at': datetime.datetime(2019, 11, 8, 16, 27, 41, 254600, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 11, 8, 16, 27, 41, 254600, tzinfo=<UTC>)}]>
+>>>    
+
+
+
+Assign the second author to the first 3 books
+>>> book_grp = Book.objects.filter(id__range = [1,2,3])
+>>> book_grp
+Traceback (most recent call last):
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\sqlite3\base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 2, and there are 3 supplied.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\sqlite3\base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 2, and there are 3 supplied.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 250, in __repr__
+    data = list(self[:REPR_OUTPUT_SIZE + 1])
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 274, in __iter__
+    self._fetch_all()
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+  File "C:\Users\blufo\onedrive\documents\coding_dojo\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\backends\sqlite3\operations.py", line 155, in last_executed_query
+    return sql % params
+TypeError: not all arguments converted during string formatting
+>>> book_grp = Book.objects.filter(id__range = [1,3])
+>>> book_grp
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>]>
+>>> author = Author.objects.get(id=2)
+>>> for book in book_grp:
+...     author.books.add(book)
+...
+>>> author.books
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x000002815B5F0E50>
+>>> author.books.all()
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>]>
+
+
+Assign the third author to the first 4 books
+>>> book_grp = Book.objects.filter(id__range=[1,4])
+>>> book_grp
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>]>
+>>> author = Author.objects.get(id=3)
+>>> for book in book_grp:
+...     author.books.add(book)
+...
+>>> author.books.all()
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>]>
+>>>     
+
+Assign the 4th author to the first 5 books( or in other words, all the books)
+>>> author = Author.objects.get(id=4)
+>>> book_grp = Book.objects.all()
+>>> book_grp
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>, <Book: Book object (5)>]>
+>>> for book in book_grp:
+...     author.books.add(book)
+...
+>>> author.books.all()
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>, <Book: Book object (5)>]>
+>>>       
+
+
+Retrieve all the authors for the 3rd book
+>>> book = Book.objects.get(id=3)
+>>> book.authors.all()
+<QuerySet [<Author: Author object (2)>, <Author: Author object (3)>, <Author: Author object (4)>]>
+>>>                                                                                                                                                              
+
+
+Remove the first author of the 3rd book
+>>> book.authors.all()
+<QuerySet [<Author: Author object (2)>, <Author: Author object (3)>, <Author: Author object (4)>]>
+>>> book.authors.remove(2)
+>>> book.authors.all()
+<QuerySet [<Author: Author object (3)>, <Author: Author object (4)>]>
+>>>        
+
+Add the 5th Author as one of the authors of the 2nd book
+>>> author = Author.objects.get(id=5)
+>>> author.books.add(2)
+>>> author.books.all()
+<QuerySet [<Book: Book object (2)>]>
+>>>    
+
+Find all the books that the 3rd author is part of
+>>> Author.objects.get(id=3).books.all()
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>]>
+>>>     
+
+
+Find all the authors that contributed to the 5th book
+>>> Book.objects.get(id=5).authors.all()
+<QuerySet [<Author: Author object (4)>]>

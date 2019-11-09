@@ -47,6 +47,24 @@ class SLL:
 
         return self
 
+    def prependVal(self, newVal, before):
+        runner = self.head
+        while runner.next != None:
+            if runner.next.value == before:
+                new_node = Node(newVal)
+                new_node.next = runner.next
+                runner.next = new_node
+                return self
+            runner = runner.next
+
+        if runner.next == None:
+            new_node = Node(newVal)
+            runner.next = new_node
+            return self
+
+        
+
+
 sll1 = SLL()
 sll1.addToFront(5).addToFront(6).addToFront(11).addBack(30)
 # this literally clears the SLL from memory since I'm setting the head to the next element, but it works for demonstration purposes
@@ -61,3 +79,8 @@ while(sll1.head != None):
     print(sll1.head.value)
     sll1.head = sll1.head.next
 
+print('*' * 80)
+sll1.addToFront(5).addToFront(6).addToFront(11).addBack(30).minToFront().prependVal(20,6)
+while(sll1.head != None):
+    print(sll1.head.value)
+    sll1.head = sll1.head.next
