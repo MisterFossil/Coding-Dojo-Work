@@ -21,6 +21,10 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.index),
+    path('authors', views.viewAuthors),
+    path('addauthor', views.addAuthor),
+    path('authors/<id>', views.authorInfo),
+    path('addBookToAuthor', views.addBookToAuthor),
     path('addbook', views.addbook),
     path('books/<id>', views.viewbook),
     path('addAuthorToBook', views.addAuthorToBook),

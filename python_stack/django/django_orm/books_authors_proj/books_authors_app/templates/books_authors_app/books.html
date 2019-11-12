@@ -26,12 +26,14 @@
             {% csrf_token %}
             <input type="hidden" name="bookId" value="{{book.id}}">
             <select name="author">
-                {% for author in authors %}
+                {% for author in authorsNotInBook %}
                 <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
                 {% endfor %}
                 <input type="submit" value="add">
             </select>
         </form>
+
+        <a href="/"><p class="notnice">To Books</p></a>
 
     </div>
 </body>
