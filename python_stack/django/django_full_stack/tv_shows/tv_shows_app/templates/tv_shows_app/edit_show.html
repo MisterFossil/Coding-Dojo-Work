@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{% static 'tv_shows_app/css/style.css' %}">
+    <title>Update</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="playnice">Edit Show {{show.id}}</h1>
+            <a href="/shows"><p class="playnice">Go Back</p></a>
+        </header>
+        <!-- add the ul error messages here -->
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ messsage.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <form action="/shows/{{show.id}}/update" method="post">
+            {% csrf_token %}
+            <div class="entry">
+                <h3>Title</h3>
+                <input type="text" name="title" value="{{show.title}}">
+            </div>
+            <div class="entry playnice">
+                <h3>Network</h3>
+                <input type="text" name="network" value="{{show.network}}">
+            </div>
+            <div class="entry playnice">
+                <h3>Release Date</h3>
+                <input type="date" name="rel_date" value="{{show.release_date|date:'Y-m-d'}}">
+            </div>
+            <div class="entry">
+                <h3>Description</h3>
+                <textarea name="desc" cols="30" rows="10">{{show.description}}</textarea>
+            </div>
+            <input type="hidden" name="id" value="{{show.id}}">
+            <input type="submit" value="Update">
+        </form>
+        <a href="/shows/{{show.id}}"><p>Go to Show</p></a>
+    </div>
+    
+</body>
+</html>
