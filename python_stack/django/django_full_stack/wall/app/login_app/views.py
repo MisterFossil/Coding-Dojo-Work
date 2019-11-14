@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from login_app.models import User
+from app.login_app.models import User
+# from app.posts_app.models import Post, Comment - shouldn't need to import these anymore now that the wall is in posts_app
 from django.contrib import messages
 import bcrypt
 
@@ -32,7 +33,8 @@ def validateLogin(request):
                 pw_hash=hash_pw.decode(), )
 
             request.session['first_name'] = request.POST['first_name']
-            return redirect('/success')
+            request.session['email'] = request.POST['email']
+            return redirect('/wall')
 
     if request.POST['log'] == 'login':
         if len(log_errors) > 0:
@@ -44,20 +46,26 @@ def validateLogin(request):
             # if user in the system, just go to "success" page
             first = User.objects.get(email = request.POST['email'])
             request.session['first_name'] = first.first_name
-            return redirect('/success')
+            request.session['email'] = request.POST['email']
+            return redirect('/wall')
 
+# I felt like the wall should be in the posts_app instead of continuing to hang out in login_app
+# def wall(request):
+#     request.session.setdefault('first_name', '')
+#     if request.session['first_name'] == '':
+#         return redirect('/')
 
-def success(request):
-    request.session.setdefault('first_name', '')
-    if request.session['first_name'] == '':
-        return redirect('/')
-
-    users = User.objects.all()
-    context = {
-        'users': users,
-    }
-    return render(request, 'login_app/welcome.html', context)
+#     user = User.objects.get(email=request.session['email'])
+#     comments = Comment.objects.all()
+#     posts = Posts.objects.all()
+#     context = {
+#         'user': user,
+#         'comments': comments,
+#         'posts': posts,
+#     }
+#     return render(request, 'login_app/welcome.html', context)
 
 def logout(request):
     del request.session['first_name']
+    del request.session['email']
     return redirect('/')

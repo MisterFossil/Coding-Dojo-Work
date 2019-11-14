@@ -40,6 +40,7 @@ class UserManager(models.Manager):
         user_ck = User.objects.filter(email = postData['email'])
         if len(user_ck) == 0:
             errors['no_email'] = "The email you've entered doesn't exist in our records. Create a new account?"
+            return errors
         # hashed password should match the decoded PW for the user in the DB 
         pw_match = bcrypt.checkpw(postData['password'].encode(), user_ck[0].pw_hash.encode())
         if not pw_match:

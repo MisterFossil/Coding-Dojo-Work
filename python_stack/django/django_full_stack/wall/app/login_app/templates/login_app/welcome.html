@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{% static 'login_app/css/style.css' %}">
+    <title>Welcome</title>
+</head>
+<body>
+    <!-- context variables: user, posts, comments-->
+    <header>
+        <h1 class="playnice">CodingDojo Wall</h1>
+        <h3 class="playnice">Welcome {{request.session.first_name.title}} : {{request.session.email}}</h3>
+        <div class="logout playnice">
+                <a href="/logout"><p>Logout</p></a>
+        </div>
+    </header>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ messsage.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="container">
+        <div class="post_form">
+            <form action="/post_message" method="post">
+            {% csrf_token %}
+                <h4>Post a message</h4>
+                <textarea name="post" cols="30" rows="6" class="boxsizingBorder"></textarea>
+                <input type="hidden" name="email" value="{{request.session.email}}">
+                <input class="blue" type="submit" value="Post a message">
+
+            </form>
+        </div>
+        {% for post in posts reversed %}
+        <div class="post_message">
+            <h3>{{post.user.first_name.title}} {{post.user.last_name.title}} - {{post.created_at|date:"F dS, Y"}}</h3>
+            <p>{{post.post}}</p>
+
+            <div class="comments">
+                {% for comment in post.post_comments.all %}
+                <p class="bolder">{{comment.user.first_name.title}} {{comment.user.last_name.title}} - {{comment.created_at|date:"F dS, Y"}}</p>
+                <p>{{comment.comment}}</p>
+                {% if comment.user.email == request.session.email %}
+                <form action="/delete_comment" method="post">
+                {% csrf_token %}
+                    <input type="hidden" name="comment_id" value="{{comment.id}}">
+                    <input type="submit" value="Delete" class="red">
+                </form>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="comment_form">
+                <form action="/add_comment" method="post">
+                {% csrf_token %}
+                    <p>Post a comment</p>
+                    <textarea name="comment" cols="30" rows="3" class="boxsizingBorder"></textarea>
+                    <input type="hidden" name="post_id" value="{{post.id}}">
+                    <input type="hidden" name="email" value="{{request.session.email}}">
+                    <input class="green" type="submit" value="Post a comment">
+
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
+
