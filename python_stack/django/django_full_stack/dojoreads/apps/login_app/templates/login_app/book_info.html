@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login_app/css/style.css' %}">
+    <title>Book Info & Add Review</title>
+</head>
+<body>
+    <header>
+        <div class="book playnice">
+            <h1>{{book.title}}</h1>
+            <h4>Author: {{book.author.name}}</h4>
+        </div>
+        <a href="/books"><p class="playnice">Home</p></a>
+        <a href="/logout"><p class="playnice">Logout</p></a>
+    </header>
+    <div class="book_container">
+        
+        <div class="reviews_of_book verts playnice">
+            <h3>Reviews:</h3>
+            {% for review in reviews %}
+            <div class="reviews">
+                <p>Rating: {{review.rating}}/5</p>
+                <p><a href="/user/{{review.user.id}}">{{review.user.alias}}</a> says: {{review.content}}</p>
+                <p>Italics Smaller, {{review.created_at}}</p>	
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="add_review playnice">
+            <form action="/book/{{book.id}}/add_review" method="post">
+                {% csrf_token %}
+                <div class="entry">
+                    <h3>Add a Review:</h3>
+                    <textarea name="content" cols="30" rows="10"></textarea>
+                </div>
+                <div class="entry">
+                    <h5 class="playnice">Rating</h5>
+                    <select name="rating" class="playnice">
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select>
+                        <h5 class="playnice">stars</h5>
+                </div>
+                <!-- <input type="hidden" name="book_id" value="{{book.id}}"> -->
+                <input type="submit" value="Submit Review">
+    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

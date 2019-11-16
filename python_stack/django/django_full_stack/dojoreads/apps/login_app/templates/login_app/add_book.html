@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login_app/css/style.css' %}">
+    <title>Add Book and Review</title>
+</head>
+<body>
+    <header>
+        <a href="/books"><p class="playnice">Home</p></a>
+        <a href="/logout"><p class="playnice">Logout</p></a>
+    </header>
+    <div class="container">
+        <h3>Add a New Book Title and Review</h3>
+        <div class="addabook">
+            <form action="create_book" method="post">
+                {% csrf_token %}
+                <div class="entry_field">
+                    <h5 class="playnice">Book Title</h5>
+                    <input type="text" name="book_title" class="playnice">
+                </div>
+                <div class="entry_field">
+                    <h5>Author</h5>
+                    <p>Choose from a list</p>
+                    <select name="author">
+                        <!--insert a for list here for all the authors -->
+                        <option value=""></option>
+                        {% for author in authors %}
+                        <option value="{{author.id}}">{{author.name}}</option>
+                        {% endfor %}
+                    </select>
+                    <p>Or add a new Author</p>
+                    <input type="text" name="new_author">
+                </div>
+                <div class="entry_field">
+                    <h5 class="playnice verts">Review</h5>
+                    <textarea name="review" cols="30" rows="10"></textarea>
+                </div>
+                <div class="entry_field">
+                    <h5 class="playnice">Entry</h5>
+                    <select name="rating" class="playnice">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                    <h5 class="playnice">stars</h5>
+                </div>
+
+                <input type="submit" value="Add Book and Review">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

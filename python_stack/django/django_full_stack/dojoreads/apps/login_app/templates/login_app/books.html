@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login_app/css/style.css' %}">
+	<title>DojoBooks Home</title>
+</head>
+<body>
+	<header>
+		<h1 class="playnice">Welcome {{user.alias.title}}</h1>
+		<a href="/add_book_form"><p class="playnice">Add Book and Review</p></a>
+		<a href="/logout"><p class="playnice">Logout</p></a>
+	</header>
+	<div class="container">
+		<div class="recent_reviews playnice verts">
+			<h3> Recent Reviews</h3>
+			{% for review in reviews %}
+			<div class="reviews">
+				<a href="/book/{{review.book.id}}"><p>{{review.book.title}}</p></a>
+				<p>{{review.rating}}/5</p>
+				<p><a href="/user/{{review.user.id}}">{{review.user.alias}}</a> says: {{review.content}}</p>
+				<p>Italics Smaller, {{review.created_at}}</p>
+				
+			</div>
+			{% endfor %}
+		</div>
+		<div class="book_list playnice verts">
+			<h3>Other Books with Reviews</h3>
+			<div class="books">
+				{% for book in books %}
+				<a href="/book/{{book.id}}"><p>{{book.title}}</p></a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

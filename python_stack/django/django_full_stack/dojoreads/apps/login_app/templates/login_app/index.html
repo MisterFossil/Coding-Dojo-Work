@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login_app/css/style.css' %}">
+	<title>DojoReads Login</title>
+</head>
+<body>
+	<h1>Welcome to DojoReads. Login!</h1>
+	<div class="container">
+		{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+			<li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+
+		<div class="entry_form playnice">
+			<h4>Register</h4>
+			<form action="/valid_reg" method="post">
+			{% csrf_token %}
+				<div class="entry_field">
+					<p class="playnice">Name:</p>
+					<input type="text" name="name" class="playnice">
+				</div>
+				<div class="entry_field">
+					<p class="playnice">Alias:</p>
+					<input type="text" name="alias" class="playnice">
+				</div>
+				<div class="entry_field">
+					<p class="playnice">Email:</p>
+					<input type="text" name="email" class="playnice">
+				</div>
+				<div class="entry_field">
+					<p class="playnice">Password:</p>
+					<input type="password" name="password" class="playnice">
+				</div>
+				<p>*Password must me at least 8 characters</p>
+				<div class="entry_field">
+					<p class="playnice">Confirm Password:</p>
+					<input type="password" name="pw_confirm" class="playnice">
+				</div>
+				<input type="submit" value="Register">
+				
+			</form>
+		</div>
+		<div class="entry_form playnice">
+			<h4>Login</h4>
+			<form action="/valid_login" method="post">
+			{% csrf_token %}
+				<div class="entry_field">
+					<p class="playnice">Email:</p>
+					<input type="text" name="email" class="playnice">
+				</div>
+				<div class="entry_field">
+					<p class="playnice">Password:</p>
+					<input type="password" name="password" class="playnice">
+				</div>
+				<input type="submit" value="Login">
+
+			</form>
+			
+		</div>
+
+	</div>
+
+</body>
+</html>

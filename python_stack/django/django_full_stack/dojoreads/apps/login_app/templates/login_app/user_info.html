@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login_app/css/style.css' %}">
+    <title>User Info</title>
+</head>
+<body>
+    <header>
+        <a href="/books"><p class="playnice">Home</p></a>
+        <a href="/add_book_form"><p class="playnice">Add Book and Review</p></a>
+        <a href="/logout"><p class="playnice">Logout</p></a>
+    </header>
+    <div class="container">
+        <div class="info">
+            <h2>Alias: {{user.alias}}</h2>
+            <h3>Name: {{user.name}}</h3>
+            <h3>Email: {{user.email}}</h3>
+            <h3>Total Reviews: {{user.user_reviews.count}}</h3>
+        </div>
+        <div class="book_reviews">
+            <h3>Posted Reviews on the Following books:</h3>
+            <ul>
+                {% for book in reviews %}
+                <li><a href="/book/{{book.book.id}}">{{book.book.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
