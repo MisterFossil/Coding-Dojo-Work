@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\obj\Debug\netcoreapp3.0\CollectionsPractice.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\obj\Debug\netcoreapp3.0\CollectionsPractice.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\obj\Debug\netcoreapp3.0\CollectionsPractice.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\bin\Debug\netcoreapp3.0\CollectionsPractice.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\bin\Debug\netcoreapp3.0\CollectionsPractice.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\bin\Debug\netcoreapp3.0\CollectionsPractice.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\bin\Debug\netcoreapp3.0\CollectionsPractice.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\bin\Debug\netcoreapp3.0\CollectionsPractice.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\bin\Debug\netcoreapp3.0\CollectionsPractice.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\obj\Debug\netcoreapp3.0\CollectionsPractice.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\CollectionsPractice\obj\Debug\netcoreapp3.0\CollectionsPractice.pdb

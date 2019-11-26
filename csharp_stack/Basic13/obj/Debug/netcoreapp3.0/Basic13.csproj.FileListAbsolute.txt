@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\bin\Debug\netcoreapp3.0\Basic13.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\bin\Debug\netcoreapp3.0\Basic13.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\bin\Debug\netcoreapp3.0\Basic13.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\bin\Debug\netcoreapp3.0\Basic13.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\bin\Debug\netcoreapp3.0\Basic13.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\bin\Debug\netcoreapp3.0\Basic13.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\obj\Debug\netcoreapp3.0\Basic13.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\obj\Debug\netcoreapp3.0\Basic13.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\obj\Debug\netcoreapp3.0\Basic13.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\obj\Debug\netcoreapp3.0\Basic13.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Basic13\obj\Debug\netcoreapp3.0\Basic13.pdb

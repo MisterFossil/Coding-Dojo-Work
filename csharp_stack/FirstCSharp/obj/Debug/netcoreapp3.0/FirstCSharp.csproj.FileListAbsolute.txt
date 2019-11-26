@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\bin\Debug\netcoreapp3.0\FirstCSharp.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\bin\Debug\netcoreapp3.0\FirstCSharp.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\bin\Debug\netcoreapp3.0\FirstCSharp.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\bin\Debug\netcoreapp3.0\FirstCSharp.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\bin\Debug\netcoreapp3.0\FirstCSharp.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\bin\Debug\netcoreapp3.0\FirstCSharp.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\obj\Debug\netcoreapp3.0\FirstCSharp.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\obj\Debug\netcoreapp3.0\FirstCSharp.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\obj\Debug\netcoreapp3.0\FirstCSharp.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\obj\Debug\netcoreapp3.0\FirstCSharp.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\FirstCSharp\obj\Debug\netcoreapp3.0\FirstCSharp.pdb

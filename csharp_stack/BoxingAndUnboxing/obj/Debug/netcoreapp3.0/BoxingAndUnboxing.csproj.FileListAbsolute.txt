@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\bin\Debug\netcoreapp3.0\BoxingAndUnboxing.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\bin\Debug\netcoreapp3.0\BoxingAndUnboxing.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\bin\Debug\netcoreapp3.0\BoxingAndUnboxing.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\bin\Debug\netcoreapp3.0\BoxingAndUnboxing.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\bin\Debug\netcoreapp3.0\BoxingAndUnboxing.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\bin\Debug\netcoreapp3.0\BoxingAndUnboxing.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\obj\Debug\netcoreapp3.0\BoxingAndUnboxing.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\obj\Debug\netcoreapp3.0\BoxingAndUnboxing.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\obj\Debug\netcoreapp3.0\BoxingAndUnboxing.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\obj\Debug\netcoreapp3.0\BoxingAndUnboxing.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\BoxingAndUnboxing\obj\Debug\netcoreapp3.0\BoxingAndUnboxing.pdb

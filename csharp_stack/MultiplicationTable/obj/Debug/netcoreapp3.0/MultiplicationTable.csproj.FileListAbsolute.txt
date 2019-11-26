@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\obj\Debug\netcoreapp3.0\MultiplicationTable.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\obj\Debug\netcoreapp3.0\MultiplicationTable.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\obj\Debug\netcoreapp3.0\MultiplicationTable.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\bin\Debug\netcoreapp3.0\MultiplicationTable.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\bin\Debug\netcoreapp3.0\MultiplicationTable.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\bin\Debug\netcoreapp3.0\MultiplicationTable.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\bin\Debug\netcoreapp3.0\MultiplicationTable.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\bin\Debug\netcoreapp3.0\MultiplicationTable.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\bin\Debug\netcoreapp3.0\MultiplicationTable.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\obj\Debug\netcoreapp3.0\MultiplicationTable.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\MultiplicationTable\obj\Debug\netcoreapp3.0\MultiplicationTable.pdb

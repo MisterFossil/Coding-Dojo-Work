@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\bin\Debug\netcoreapp3.0\puzzles.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\bin\Debug\netcoreapp3.0\puzzles.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\bin\Debug\netcoreapp3.0\puzzles.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\bin\Debug\netcoreapp3.0\puzzles.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\bin\Debug\netcoreapp3.0\puzzles.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\bin\Debug\netcoreapp3.0\puzzles.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\obj\Debug\netcoreapp3.0\puzzles.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\obj\Debug\netcoreapp3.0\puzzles.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\obj\Debug\netcoreapp3.0\puzzles.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\obj\Debug\netcoreapp3.0\puzzles.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\puzzles\obj\Debug\netcoreapp3.0\puzzles.pdb
