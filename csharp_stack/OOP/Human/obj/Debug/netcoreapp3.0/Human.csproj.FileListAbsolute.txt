@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\bin\Debug\netcoreapp3.0\Human.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\bin\Debug\netcoreapp3.0\Human.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\bin\Debug\netcoreapp3.0\Human.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\bin\Debug\netcoreapp3.0\Human.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\bin\Debug\netcoreapp3.0\Human.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\bin\Debug\netcoreapp3.0\Human.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\obj\Debug\netcoreapp3.0\Human.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\obj\Debug\netcoreapp3.0\Human.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\obj\Debug\netcoreapp3.0\Human.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\obj\Debug\netcoreapp3.0\Human.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\Human\obj\Debug\netcoreapp3.0\Human.pdb
