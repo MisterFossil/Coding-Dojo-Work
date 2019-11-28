@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\bin\Debug\netcoreapp3.0\WizardNinjaSamurai.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\bin\Debug\netcoreapp3.0\WizardNinjaSamurai.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\bin\Debug\netcoreapp3.0\WizardNinjaSamurai.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\bin\Debug\netcoreapp3.0\WizardNinjaSamurai.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\bin\Debug\netcoreapp3.0\WizardNinjaSamurai.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\bin\Debug\netcoreapp3.0\WizardNinjaSamurai.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\obj\Debug\netcoreapp3.0\WizardNinjaSamurai.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\obj\Debug\netcoreapp3.0\WizardNinjaSamurai.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\obj\Debug\netcoreapp3.0\WizardNinjaSamurai.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\obj\Debug\netcoreapp3.0\WizardNinjaSamurai.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\WizardNinjaSamurai\obj\Debug\netcoreapp3.0\WizardNinjaSamurai.pdb

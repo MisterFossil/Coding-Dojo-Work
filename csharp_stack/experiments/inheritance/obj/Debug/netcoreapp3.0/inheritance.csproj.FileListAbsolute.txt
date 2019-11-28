@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\obj\Debug\netcoreapp3.0\inheritance.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\obj\Debug\netcoreapp3.0\inheritance.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\obj\Debug\netcoreapp3.0\inheritance.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\bin\Debug\netcoreapp3.0\inheritance.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\bin\Debug\netcoreapp3.0\inheritance.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\bin\Debug\netcoreapp3.0\inheritance.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\bin\Debug\netcoreapp3.0\inheritance.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\bin\Debug\netcoreapp3.0\inheritance.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\bin\Debug\netcoreapp3.0\inheritance.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\obj\Debug\netcoreapp3.0\inheritance.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\experiments\inheritance\obj\Debug\netcoreapp3.0\inheritance.pdb

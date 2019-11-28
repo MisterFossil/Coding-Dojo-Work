@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\bin\Debug\netcoreapp3.0\IronNinja.exe
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\bin\Debug\netcoreapp3.0\IronNinja.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\bin\Debug\netcoreapp3.0\IronNinja.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\bin\Debug\netcoreapp3.0\IronNinja.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\bin\Debug\netcoreapp3.0\IronNinja.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\bin\Debug\netcoreapp3.0\IronNinja.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\obj\Debug\netcoreapp3.0\IronNinja.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\obj\Debug\netcoreapp3.0\IronNinja.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\obj\Debug\netcoreapp3.0\IronNinja.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\obj\Debug\netcoreapp3.0\IronNinja.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\OOP\IronNinja\obj\Debug\netcoreapp3.0\IronNinja.pdb
