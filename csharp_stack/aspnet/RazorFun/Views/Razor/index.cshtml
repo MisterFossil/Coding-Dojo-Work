@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Razor Fun!</title>
+</head>
+<body>
+    <h1>Here are some delicious foods!</h1>
+    @{
+        string[] foods = {"Apple Pie","Burritos","Clams Casino","Donuts","Pizza","Cake","Spaghetti","Cereal","Ham Sandwich"};
+        <ul>
+            @foreach(string food in foods) {
+                if(food[0] == 'C') {
+                    <li class="red">@food</li>
+                }
+                else
+                {
+                    <li>@food</li>
+                }
+            }
+
+        </ul>
+    }
+</body>
+</html>

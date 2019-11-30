@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Me</title>
+    <!-- In this context '~' refers to the wwwroot folder -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Contact Info</title>
 </head>
 <body>
-    <h1>I'm looking forward to working with you! Here's how to get in touch:</h1>
+    <header>
+        <p class="playnice"><a href="/">Home</a> | </p>
+        <p class="playnice"><a href="/projects">Projects</a> | </p>
+        <p class="playnice">Contact</p>
+    </header>
+    <div class="container">
+        <h1>Contact Me!</h1>
+        <!-- just want a redirect back to the home page, will need to add method="post" back to the form when ready -->
+        <form action="/">
+            <div class="con_info playnice verts">
+                <div class="form-entry block">
+                    <label for="con_name">Name</label>
+                    <input type="text" name="name" id="con_name">
+                </div>
+                <div class="form-entry block">
+                    <label for="con_email">Email</label>
+                    <input type="text" name="email" id="con_email">
+                </div>
+            </div>
+            <div class="con_message playnice verts">
+                <label for="con_message" class="block">Message</label>
+                <textarea name="message" id="con_message" cols="30" rows="10"></textarea>
+
+            </div>
+            <input type="submit" value="Send" class="block">
+        </form>
+    </div>
 </body>
 </html>

@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- In this context '~' refers to the wwwroot folder -->
+    <link rel="stylesheet" href="~/css/style.css">
     <title>Projects</title>
 </head>
 <body>
-    <h1>These are the projects I've done</h1>
+    <header>
+        <p class="playnice"><a href="/">Home</a> | </p>
+        <p class="playnice">Projects | </p>
+        <p class="playnice"><a href="/contact">Contact</a></p>
+    </header>
+    <div class="container">
+        <h1>Here are some of the projects of mine!</h1>
+        <div class="projects">
+            <div class="proj">
+                <img src="~/img/book.png" alt="book project" class="playnice">
+                <div class="proj_info playnice">
+                    <h4 class="verts">All the Books!</h4>
+                    <p class="verts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae placeat id quas rem, laboriosam velit reiciendis dolor obcaecati sed, non cum praesentium eaque itaque.</p>
+                </div>
+            </div>
+            <div class="proj">
+                <img src="~/img/cactus.png" alt="cactus project">
+                <div class="proj_info playnice">
+                    <h4 class="verts">Cactus Lovers Forums</h4>
+                    <p class="verts">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quibusdam rem ullam molestiae, perspiciatis corrupti rerum repellat expedita. Maxime, rerum ad nobis esse vero voluptatem?</p>
+                </div>
+            </div>
+            <div class="proj">
+                <img src="~/img/game.png" alt="Grog Game">
+                <div class="proj_info playnice">
+                    <h4 class="verts">Grog: The Game</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi accusantium aliquid. Dolor, adipisci voluptates quidem harum ea pariatur sit! Vero inventore aperiam autem ipsum!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>

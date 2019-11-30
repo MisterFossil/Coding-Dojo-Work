@@ -25,7 +25,7 @@ namespace ProfileRedux
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
             app.UseMvc();
 
             // app.Run(async (context) =>
