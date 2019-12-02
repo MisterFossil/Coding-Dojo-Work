@@ -1,0 +1,12 @@
+@using ModelFun.Models
+@model Numbers
+<div class="text-center">
+    <h3>Here are some Numbers!</h3>
+
+</div>
+<ul>
+    @foreach (int num in Model.nums)
+    {
+        <li>@num</li>
+    }
+</ul>

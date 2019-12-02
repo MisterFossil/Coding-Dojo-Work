@@ -1,0 +1,13 @@
+@using ModelFun.Models
+@model Users
+
+<div class="text-center">
+    <h3>Here are some Users!</h3>
+</div>
+<ul>
+@foreach(string user in Model.userList)
+{
+    <li>@user</li>
+    
+}
+</ul>
