@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\forms\\Forms.csproj",
+  "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Forms.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,13 +2961,28 @@
   "RootNamespace": "Forms",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\forms\\Views\\Form\\index.cshtml",
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\Form\\index.cshtml",
       "TargetPath": "Views\\Form\\index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\forms\\Views\\Form\\result.cshtml",
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\Form\\result.cshtml",
       "TargetPath": "Views\\Form\\result.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     }
   ],

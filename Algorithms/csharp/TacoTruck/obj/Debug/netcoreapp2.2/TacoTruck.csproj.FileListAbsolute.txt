@@ -1,0 +1,11 @@
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\obj\Debug\netcoreapp2.2\TacoTruck.csprojAssemblyReference.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\obj\Debug\netcoreapp2.2\TacoTruck.csproj.CoreCompileInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\obj\Debug\netcoreapp2.2\TacoTruck.AssemblyInfoInputs.cache
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\obj\Debug\netcoreapp2.2\TacoTruck.AssemblyInfo.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\bin\Debug\netcoreapp2.2\TacoTruck.deps.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\bin\Debug\netcoreapp2.2\TacoTruck.runtimeconfig.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\bin\Debug\netcoreapp2.2\TacoTruck.runtimeconfig.dev.json
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\bin\Debug\netcoreapp2.2\TacoTruck.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\bin\Debug\netcoreapp2.2\TacoTruck.pdb
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\obj\Debug\netcoreapp2.2\TacoTruck.dll
+C:\Users\blufo\OneDrive\Documents\coding_dojo\Algorithms\csharp\TacoTruck\obj\Debug\netcoreapp2.2\TacoTruck.pdb

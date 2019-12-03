@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Random Passcode";
+}
+
+<div class="text-center">
+    <div class="col">
+        <h1 class="display-4">Welcome</h1>
+        <h3>Random passcode (passcode #@ViewBag.num)</h3>
+        <p>@ViewBag.code</p>
+        <p>@ViewBag.num</p>
+        <a href="/">
+        <button>New Code</button>        
+        </a>
+    </div>
+</div>

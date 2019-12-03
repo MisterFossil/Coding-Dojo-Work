@@ -14,11 +14,14 @@ C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debu
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.TagHelpers.input.cache
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.TagHelpers.output.cache
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.RazorCoreGenerate.cache
-C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\Form\index.g.cshtml.cs
-C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\Form\result.g.cshtml.cs
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.RazorTargetAssemblyInfo.cache
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.RazorTargetAssemblyInfo.cs
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.Views.pdb
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.dll
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.pdb
 C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Forms.csproj.CopyComplete
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\DojoForm\index.g.cshtml.cs
+C:\Users\blufo\OneDrive\Documents\coding_dojo\csharp_stack\aspnet\Forms\obj\Debug\netcoreapp2.2\Razor\Views\DojoForm\result.g.cshtml.cs

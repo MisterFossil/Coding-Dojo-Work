@@ -1,0 +1,28 @@
+
+    <h1>Dojo Survey</h1>
+
+    @model Survey
+
+    <form asp-action="Submission" asp-controller="DojoForm" method="post">
+        <div class="form-entry">
+            <label asp-for="name"></label>
+            <span asp-validation-for="name"></span>
+            <input asp-for="name">
+        </div>
+        <div class="form-entry">
+            <label asp-for="location"></label>
+            <span asp-validation-for="location"></span>
+            <select asp-for="location" asp-items="Model.locations"></select>
+        </div>
+        <div class="form-entry">
+            <label asp-for="language"></label>
+            <span asp-validation-for="language"></span>
+            <select asp-for="language" asp-items="Model.languages"></select>
+        </div>
+        <div class="form-entry">
+            <label asp-for="comment"></label>
+            <span asp-validation-for="comment"></span>
+            <textarea asp-for="comment"></textarea>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
