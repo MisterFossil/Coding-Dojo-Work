@@ -2961,8 +2961,8 @@
   "RootNamespace": "Forms",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\Form\\index.cshtml",
-      "TargetPath": "Views\\Form\\index.cshtml",
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\DojoForm\\result.cshtml",
+      "TargetPath": "Views\\DojoForm\\result.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2976,8 +2976,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\Form\\result.cshtml",
-      "TargetPath": "Views\\Form\\result.cshtml",
+      "FilePath": "c:\\Users\\blufo\\OneDrive\\Documents\\coding_dojo\\csharp_stack\\aspnet\\Forms\\Views\\DojoForm\\index.cshtml",
+      "TargetPath": "Views\\DojoForm\\index.cshtml",
       "FileKind": "mvc"
     },
     {

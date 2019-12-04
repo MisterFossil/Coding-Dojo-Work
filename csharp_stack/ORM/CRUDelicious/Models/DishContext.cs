@@ -6,5 +6,7 @@ namespace CRUDelicious.Models
     {
         // base() calls the parent class' contructor passing the "options" parameter along
         public DishContext(DbContextOptions options) :base(options) {}
+
+        public DbSet<Dish> Dishes {get;set;}
     }
 }
