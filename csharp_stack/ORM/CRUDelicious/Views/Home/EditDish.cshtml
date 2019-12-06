@@ -1,0 +1,48 @@
+
+<div class="container">
+    <h3 class="text-center">Edit: @ViewBag.DishEdit.Name</h3>
+    @model Dish
+    <form action="/update/@ViewBag.DishEdit.DishId" method="post">
+        <div class="row">
+            <div class="col">
+                <div class="form-entry">
+                    <label asp-for="Chef"></label>
+                    <span asp-validation-for="Chef" class="text-danger"></span>
+                    <input asp-for="Chef" class="form-control" value="@ViewBag.DishEdit.Chef">
+                </div>
+                <div class="form-entry">
+                    <label asp-for="Name"></label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input asp-for="Name" class="form-control" value="@ViewBag.DishEdit.Name">
+                </div>
+                <div class="form-entry">
+                    <label asp-for="Calories"></label>
+                    <span asp-validation-for="Calories" class="text-danger"></span>
+                    <input asp-for="Calories" class="form-control" value="@ViewBag.DishEdit.Calories">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-entry">
+                    <label asp-for="Tastiness"></label>
+                    <span asp-validation-for="Tastiness" class="text-danger"></span>
+                    <select asp-for="Tastiness" class="form-control">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-entry">
+                    <label asp-for="Description"></label>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <textarea name="Description" class="form-control">@ViewBag.DishEdit.Description</textarea>
+                </div>
+                <input type="submit" value="Update Dish" class="btn btn-success mt-3">
+            </div>
+
+        </div>
+    </form>
+</div>

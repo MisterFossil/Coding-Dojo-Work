@@ -10,7 +10,7 @@ namespace CRUDelicious.Models
     {
         [Key]
         public int DishId {get;set;}
-        [Required]
+        [Required(ErrorMessage="The Dish must have a name")]
         [MinLength(4)]
         public string Name {get;set;}
         [Required]

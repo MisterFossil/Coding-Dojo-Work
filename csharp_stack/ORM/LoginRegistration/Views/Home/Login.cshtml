@@ -1,0 +1,23 @@
+<h3>Login to this Cool Site!</h3>
+@model User
+<form action="#" method="post">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-entry">
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
+                <input asp-for="Email" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
+                <input asp-for="Password" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="submit" value="Login Now!" class="btn btn-primary mt-3">
+        </div>
+    </div>
+</form>

@@ -23,7 +23,7 @@ namespace CRUDelicious.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            ViewBag.AllDishes = dbContext.Dishes.ToList().OrderByDescending(dish => dish.Created_At);
+            ViewBag.AllDishes = dbContext.Dishes.ToList().OrderByDescending(dish => dish.Created_At).Take(5);
             return View();
         }
 
@@ -34,7 +34,21 @@ namespace CRUDelicious.Controllers
             return View(model);
         }
 
-        // ALL THE RIDIRECTS
+        [HttpGet("{dishId}")]
+        public IActionResult ViewDish(int dishId)
+        {
+            ViewBag.Item = dbContext.Dishes.FirstOrDefault(dish => dish.DishId == dishId);
+            return View();
+        }
+
+        [HttpGet("edit/{dishId}")]
+        public IActionResult EditDish(int dishId)
+        {
+            ViewBag.DishEdit = dbContext.Dishes.FirstOrDefault(dish => dish.DishId == dishId);
+            return View();
+        }
+
+        // ALL THE Table Manipulators
         [HttpPost("dish/add")]
         public IActionResult AddDish(Dish newDish)
         {
@@ -47,8 +61,38 @@ namespace CRUDelicious.Controllers
             }
             Console.WriteLine("*************Your model si wrong*****************");
             var model = new Dish();
-            return View("NewDish", model);
-            
+            return View("NewDish", model);            
+        }
+
+        [HttpGet("delete/{dishId}")]
+        public IActionResult DeleteDish(int dishId)
+        {
+            Dish DishToDelete = dbContext.Dishes.FirstOrDefault(dish => dish.DishId == dishId);
+            dbContext.Remove(DishToDelete);
+            dbContext.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        [HttpPost("update/{DishId}")]
+        public IActionResult UpdateDish(Dish UpDish, int DishId)
+        {
+            if(ModelState.IsValid)
+            {
+                Console.WriteLine("*****************Inside the model validator********************");
+                Dish DishToUpdate = dbContext.Dishes.FirstOrDefault(dish => dish.DishId == DishId);
+                DishToUpdate.Name = UpDish.Name;
+                DishToUpdate.Chef = UpDish.Chef;
+                DishToUpdate.Calories = UpDish.Calories;
+                DishToUpdate.Tastiness = UpDish.Tastiness;
+                DishToUpdate.Description = UpDish.Description;
+                DishToUpdate.Updated_At = DateTime.Now;
+                dbContext.SaveChanges();
+                return RedirectToAction("ViewDish", new {DishId});
+            }
+            ViewBag.DishEdit = dbContext.Dishes.FirstOrDefault(dish => dish.DishId == DishId);
+            Console.WriteLine("*****************Model isn't valid********************");
+            return View("EditDish");
         }
 
 

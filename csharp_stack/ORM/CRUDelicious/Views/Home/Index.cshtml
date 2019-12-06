@@ -7,6 +7,6 @@
     <h4 class="mb-4">Check Out Some Recent Dishes!</h4>
     @foreach(var dish in ViewBag.AllDishes)
     {
-        <p>@dish.Name by @dish.Chef</p>
+        <p><a href="/@dish.DishId">@dish.Name</a> by @dish.Chef</p>
     }
 </div>

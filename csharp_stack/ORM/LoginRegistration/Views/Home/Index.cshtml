@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h3 class="mb-4">Register to this Cool Site!</h3>
+@model User
+
+<form action="/register" method="post">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-entry">
+                <label asp-for="FirstName"></label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <input asp-for="FirstName" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="LastName"></label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                <input asp-for="LastName" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <input asp-for="Email" class="form-control">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-entry">
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <input asp-for="Password" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="Confirm"></label>
+                <span asp-validation-for="Confirm" class="text-danger"></span>
+                <input asp-for="Confirm" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="submit" value="Sign Up Now!" class="btn btn-primary mt-3">
+        </div>
+    </div>
+</form>

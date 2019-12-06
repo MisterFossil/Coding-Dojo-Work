@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <h3>@ViewBag.Item.Name</h3>
+            <h5>@ViewBag.Item.Chef</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>@ViewBag.Item.Description</p>
+            <p>Calories: @ViewBag.Item.Calories</p>
+            <p>Tastiness: @ViewBag.Item.Tastiness</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="/delete/@ViewBag.Item.DishId">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+        </div>
+        <div class="col">
+            <a href="/edit/@ViewBag.Item.DishId">
+                <button class="btn btn-info">Edit</button>
+            </a>
+        </div>
+    </div>
+
+</div>
