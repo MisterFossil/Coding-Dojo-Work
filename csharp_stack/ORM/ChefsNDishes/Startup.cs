@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ChefsNDishes.Models;
 using Microsoft.EntityFrameworkCore;
-using LoginRegistration.Models;
 
-namespace LoginRegistration
+namespace ChefsNDishes
 {
     public class Startup
     {
@@ -25,9 +25,8 @@ namespace LoginRegistration
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<LoginContext> (options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
-            services.AddSession();
 
+            services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -44,7 +43,6 @@ namespace LoginRegistration
             }
 
             app.UseStaticFiles();
-            app.UseSession();
 
             app.UseMvc();
         }

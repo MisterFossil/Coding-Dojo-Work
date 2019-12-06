@@ -1,17 +1,17 @@
 <h3>Login to this Cool Site!</h3>
-@model User
-<form action="#" method="post">
+@model LUser
+<form action="/checkLog" method="post">
     <div class="row">
         <div class="col-sm-3">
             <div class="form-entry">
-                <label asp-for="Email"></label>
-                <span asp-validation-for="Email"></span>
-                <input asp-for="Email" class="form-control">
+                <label >Email</label>
+                <span asp-validation-for="LEmail" class="text-danger"></span>
+                <input asp-for="LEmail" class="form-control">
             </div>
             <div class="form-entry">
-                <label asp-for="Password"></label>
-                <span asp-validation-for="Password"></span>
-                <input asp-for="Password" class="form-control">
+                <label asp-for="LPassword"></label>
+                <span asp-validation-for="LPassword" class="text-danger"></span>
+                <input asp-for="LPassword" class="form-control">
             </div>
         </div>
     </div>
