@@ -19,19 +19,63 @@ namespace ChefsNDishes.Controllers
         }
 
 
-
+        // Renders
         [HttpGet("")]
         public IActionResult Index()
         {
-            ViewBag.AllChefs = dbContext.Chefs.ToList();
+            ViewBag.AllChefs = dbContext.Chefs
+                .Include(chef => chef.CreatedDishes)
+                .ToList();
             return View();
         }
 
         [HttpGet("dishes")]
         public IActionResult Dishes()
         {
-            ViewBag.AllDishes = dbContext.Dishes.ToList();
+            ViewBag.AllDishes = dbContext.Dishes
+                .Include(dish => dish.Creator)
+                .ToList();
             return View();
+        }
+
+        [HttpGet("addAChef")]
+        public IActionResult AddAChef()
+        {
+            return View();
+        }
+
+        [HttpGet("addADish")]
+        public IActionResult AddADish()
+        {
+            ViewBag.AllChefs = dbContext.Chefs.ToList();
+            return View();
+        }
+
+        // Data Manipulations Down Here
+
+        [HttpPost("createChef")]
+        public IActionResult CreateChef(Chef chef)
+        {
+            if(ModelState.IsValid)
+            {
+                dbContext.Add(chef);
+                dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View("AddAChef");
+        }
+
+        [HttpPost("createDish")]
+        public IActionResult CreateDish(Dish dish)
+        {
+            if(ModelState.IsValid)
+            {
+                dbContext.Add(dish);
+                dbContext.SaveChanges();
+                return RedirectToAction("Dishes");
+            }
+            ViewBag.AllChefs = dbContext.Chefs.ToList();
+            return View("AddADish");
         }
     }
 }

@@ -1,13 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Pro Chefs Here People!";
-}
+﻿@using System;
+@{
+    ViewData["Title"] = "Pro Cooks Here People!";
+    DateTime today = DateTime.Today;
 
+}
+<div class="float-right">
+    <a href="/addAChef"><p>Add a Chef</p></a>
+</div>
 <div class="row">
     <h5>Check out our roster of Chefs!</h5>
 </div>
 <div class="row">
-    <p>insert a weird page break divider</p>
-</div>
-<div class="row">
-    <p>Table Goes Here</p>
+    <div class="col-8">
+
+        <table class="table table-striped table-bordered"> 
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Number of Dishes</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var chef in ViewBag.AllChefs)
+                {
+                    var bday = chef.DateOfBirth.Date;
+                    var age = today.Year - bday.Year;
+                    if (today.Month < bday.Month || (today.Month == bday.Month && today.Day < bday.Day))
+                    {
+                        age--;
+                    }
+                    <tr>
+                        <td>@chef.FirstName @chef.LastName</td>
+                        <td>@age</td>
+                        <td>@chef.CreatedDishes.Count</td>
+                    </tr>               
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

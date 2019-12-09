@@ -2,12 +2,34 @@
     ViewData["Title"] = "All Those Tasty Dishes";
 }
 
+<div class="float-right">
+    <a href="/addADish"><p>Add a Dish</p></a>
+</div>
 <div class="row">
     <h5>Yum, take a look at our tasty dishes!</h5>
 </div>
 <div class="row">
-    <p>insert a weird page break divider</p>
-</div>
-<div class="row">
-    <p>Table Goes Here</p>
+    <div class="col-8">
+        <table class="table table-striped table-bordered"> 
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Chef</th>
+                    <th>Tastiness</th>
+                    <th>Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dish in ViewBag.AllDishes)
+                {
+                    <tr>
+                        <td>@dish.Name</td>
+                        <td>@dish.Creator.FirstName @dish.Creator.LastName</td>
+                        <td>@dish.Tastiness</td>
+                        <td>@dish.Calories</td>
+                    </tr>               
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

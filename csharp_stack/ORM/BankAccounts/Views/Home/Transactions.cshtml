@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Account Summary";
+}
+
+<div class="float-right">
+    <p><a href="/logout">Logout</a></p>
+</div>
+@model Transaction
+<div class="row">
+    <div class="col-7">
+        <h3>Welcome, @ViewBag.user.Email </h3>
+    </div>
+    <div class="col">
+        <p>Current Balance: Sum of transactions here</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <form action="/makeTransaction" method="post">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-entry">
+                        <label asp-for="Amount"></label>
+                        <span asp-validation-for="Amount"></span>
+                        <input asp-for="Amount" class="form-control">
+                    </div>
+                    <input type="hidden" name="UserId" value="@ViewBag.user.UserId">
+                    <input type="submit" value="Submit" class="btn btn-success mt-2">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

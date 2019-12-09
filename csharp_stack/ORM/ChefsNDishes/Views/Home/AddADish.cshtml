@@ -1,0 +1,57 @@
+
+<a href="/dishes"><p class="float-right">Home</p></a>
+
+@model Dish
+<form action="/createDish" method="post">
+    <h3>Add a Dish!</h3>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-entry">
+                    <label asp-for="Name"></label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input asp-for="Name" class="form-control">
+                </div>
+                <div class="form-entry">
+                    <label asp-for="Calories"></label>
+                    <span asp-validation-for="Calories" class="text-danger"></span>
+                    <input asp-for="Calories" class="form-control">
+                </div>
+                <div class="form-entry">
+                    <label asp-for="Description"></label>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-entry">
+                    <label asp-for="ChefId"></label>
+                    <span asp-validation-for="ChefId" class="text-danger"></span>
+                    <select name="ChefId" class="form-control">
+                        @foreach (var chef in ViewBag.AllChefs)
+                        {
+                            <option value="@chef.ChefId">@chef.FirstName @chef.LastName </option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Tastiness"></label>
+                <span asp-validation-for="Tastiness" class="text-danger"></span>
+                <select name="Tastiness" class="form-control">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="Add Dish" class="btn btn-success mt-4">
+
+                </div>
+
+            </div>
+    </div>
+</form>
