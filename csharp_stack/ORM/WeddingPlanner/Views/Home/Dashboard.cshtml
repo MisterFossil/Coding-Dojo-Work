@@ -1,0 +1,53 @@
+
+@{
+    // add variables for RSVP/Un-RSVP/Creator
+    // theres a query that's like In() that will check if something is in a field.
+}
+<h3>You Made it @ViewBag.user.FirstName! You have arrived</h3>
+<h3>Table of All Wedding Plans</h3>
+<table class="table table-bordered table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var plan in ViewBag.allPlans)
+        {
+            bool attending = false;
+            foreach(var att in plan.Attendees)
+            {
+                if(att.User.UserId == ViewBag.user.UserId)
+                {
+                    attending = true;
+                }
+            }
+            
+            <tr>
+                <td><a href="/wedding/@plan.WeddingPlanId">@plan.PartyOne & @plan.PartyTwo</a></td>
+                <td>@plan.EventDate.ToString("MMM dd, yyyy")</td>
+                <td>@plan.Attendees.Count</td>
+                @if(plan.Creator.UserId == ViewBag.user.UserId)
+                {
+                    <td><a href="/delete/@plan.WeddingPlanId">Delete</a></td>
+                }
+                else if(attending == false)
+                {
+                    <td><a href="/attend/@plan.WeddingPlanId/@ViewBag.user.UserId">RSVP</a></td>
+                }
+                else if(attending == true)
+                {
+                    <td><a href="/unattend/@plan.WeddingPlanId/@ViewBag.user.UserId">Un-RSVP</a></td>
+                }
+
+                
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+<a href="/newWedding"><button class="btn btn-info">New Wedding</button></a>

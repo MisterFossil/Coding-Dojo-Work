@@ -1,0 +1,30 @@
+@model WeddingPlan
+<div class="row">
+    <div class="col-6">
+        <h2>Plan Your Wedding</h2>
+        <form action="/createWedding" method="post">
+            <div class="form-entry">
+                <label asp-for="PartyOne"></label>
+                <span asp-validation-for="PartyOne" class="text-danger"></span>
+                <input asp-for="PartyOne" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="PartyTwo"></label>
+                <span asp-validation-for="PartyTwo" class="text-danger"></span>
+                <input asp-for="PartyTwo" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="EventDate"></label>
+                <span asp-validation-for="EventDate" class="text-danger"></span>
+                <input asp-for="EventDate" class="form-control">
+            </div>
+            <div class="form-entry">
+                <label asp-for="Address"></label>
+                <span asp-validation-for="Address" class="text-danger"></span>
+                <input asp-for="Address" class="form-control">
+            </div>
+            <input type="hidden" name="UserId" value="@ViewBag.UserId">
+            <input type="submit" value="Create" class="btn btn-warning mt-3">
+        </form>
+    </div>
+</div>

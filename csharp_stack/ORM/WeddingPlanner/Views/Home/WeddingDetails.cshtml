@@ -1,0 +1,10 @@
+<h2>@ViewBag.wedding.PartyOne & @ViewBag.wedding.PartyTwo's Wedding</h2>
+<h3>Date: @ViewBag.wedding.EventDate.ToString("MMMM dd, yyyy")</h3>
+
+<h4>Guests</h4>
+<div class="col">
+    @foreach(var guest in @ViewBag.wedding.Attendees)
+    {
+        <p>@guest.User.FirstName @guest.User.LastName</p>
+    }
+</div>

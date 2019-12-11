@@ -38,9 +38,18 @@ namespace BankAccounts.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.user = dbContext.Users
+            User user = dbContext.Users
                 .Include(u => u.UserTransactions)
                 .FirstOrDefault(u => u.UserId == userId);
+
+            ViewBag.user = user;
+
+            ViewBag.allUserTransactions = dbContext.Transactions
+                .Where(u => u.AccountHolder.UserId == userId)
+                .OrderByDescending(t => t.CreatedAt);
+
+            decimal accountSum = user.UserTransactions.Sum(x => x.Amount);
+            ViewBag.accountSum = accountSum;
 
             return View();
         }
@@ -114,6 +123,39 @@ namespace BankAccounts.Controllers
                 return RedirectToAction("Transactions", new{userInDb.UserId});
             }
             return View("Index");
+        }
+
+        // Adding transactions to user's accounts
+        [HttpPost("makeTransaction")]
+        public IActionResult MakeTransaction(Transaction money)
+        {
+            User user = dbContext.Users
+                .Include(u => u.UserTransactions)
+                .FirstOrDefault(u => u.UserId == money.UserId);
+
+            ViewBag.user = user;
+            decimal accountSum = user.UserTransactions.Sum(x => x.Amount);
+            ViewBag.accountSum = accountSum;
+
+            ViewBag.allUserTransactions = dbContext.Transactions
+                .Where(u => u.AccountHolder.UserId == money.UserId)
+                .OrderByDescending(t => t.CreatedAt);
+
+            if(ModelState.IsValid)
+            {
+
+                decimal balance = money.Amount + accountSum;
+                if (balance < 0)
+                {
+                    ModelState.AddModelError("Amount","Must have available funds to withdraw money");
+                    return View("Transactions");
+                }
+                dbContext.Add(money);
+                dbContext.SaveChanges();
+
+                return RedirectToAction("Transactions", new{user.UserId});
+            }
+            return View("Transactions");
         }
     }
 }

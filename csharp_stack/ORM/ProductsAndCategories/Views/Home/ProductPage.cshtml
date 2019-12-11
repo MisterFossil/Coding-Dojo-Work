@@ -1,0 +1,27 @@
+<h2 class="text-center">@ViewBag.prod.Name</h2>
+@model Association
+<div class="row">
+    <div class="col">
+        <h3>Categories</h3>
+        @foreach (var prod in @ViewBag.prodCats.Categories)
+        {
+              <p>- @prod.Category.Name</p>
+        }
+    </div>
+    <div class="col">
+        <form action="/addAssociation" method="post">
+            <h4>Add Category</h4>
+            <div class="form-entry">
+                <select asp-for="CategoryId" class="form-control">
+                    @foreach(var cat in ViewBag.categoryMinus)
+                    {
+                        <option value="@cat.CategoryId">@cat.Name</option>
+                    }
+                </select>
+            </div>
+            <input type="hidden" asp-for="ProductId" value="@ViewBag.prod.ProductId">
+            <input type="hidden" name="fromProd" value="true">
+            <input type="submit" value="Add" class="btn btn-warning mt-3">
+        </form>
+    </div>
+</div>

@@ -9,7 +9,8 @@ namespace BankAccounts.Models
         public int TransactionId {get;set;}
         [Required]
         [Display(Name="Deposit/Withdraw")]
-        public float Amount {get;set;}
+        [DataType(DataType.Currency)]
+        public decimal Amount {get;set;}
         [Required]
         public int UserId {get;set;}
         // Navigation Property for related User object
