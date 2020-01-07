@@ -194,6 +194,10 @@ namespace WeddingPlanner.Controllers
             if(ModelState.IsValid)
             {
                 dbContext.Add(plan);
+                GuestList newlist = new GuestList();
+                newlist.UserId = (int)HttpContext.Session.GetInt32("UserId");
+                newlist.WeddingPlanId = plan.WeddingPlanId;
+                dbContext.Add(newlist);
                 dbContext.SaveChanges();
                 return RedirectToAction("Dashboard");
 
