@@ -1,4 +1,4 @@
-class Card {
+export class Card {
     // Card needs to have the following attributes:
     // suit, value, image
     // image should look like those in imgs folder
@@ -7,6 +7,6 @@ class Card {
     constructor(suit, value){
         this.suit = suit;
         this.value = value;
-        this.image = `imgs/${value[0]}${suit[0]}.png`;
+        this.image = "";
     }
 }
