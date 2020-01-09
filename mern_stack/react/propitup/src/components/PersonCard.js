@@ -5,7 +5,7 @@ class PersonCard extends Component {
         this.state = {
             age: props.age
         }
-    }
+    }z
 
     handleClick = () => {
         this.setState({
