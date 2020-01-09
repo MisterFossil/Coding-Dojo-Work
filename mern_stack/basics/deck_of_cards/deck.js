@@ -1,5 +1,3 @@
-import {Card} from 'card';
-
 const suits = ["Clubs", "Diamonds", "Hearts", "Spades"];
 const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
 
@@ -11,8 +9,17 @@ class Deck{
         {
             for (let j = 0; j < values.length; j++)
             {
-                let card = new Card(suits[i],values[j],`${value[0].toString()}${suit[0]}.png`);
-                deck.push(card);
+                let valImg = "";
+                if (typeof values[j] === String ){
+                    valImg = values[j][0];
+                    console.log("true");
+                } else if (values[j] instanceof Number){
+                    valImg = values[j].toString();
+                    console.log("true");
+                }
+                const card1 = new Card(suits[i],values[j],`${valImg}${suits[i][0]}.png`);
+                console.log(card1);
+                this.deck.push(card1);
             }
         }
     }
@@ -21,7 +28,11 @@ class Deck{
         this.deck = new Deck();
     }
     // randomize the order of the cards in the deck
-    shuffle(){}
+    shuffle(){
+        console.log("shuffle");
+    }
     // remove and return a card
-    deal(){}
+    deal(){
+        return this.deck.splice(0,1);
+    }
 }
