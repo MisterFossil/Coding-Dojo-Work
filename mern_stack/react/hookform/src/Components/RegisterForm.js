@@ -45,7 +45,7 @@ const RegisterForm = props => {
                 <br/>
                 <label>Confirm Password</label>
                 <input type="password" name="confirmPassword" onChange={onChangeHandler}/>
-                <p>{formState.password === formState.confirmPassword ? "Match" : "Password and Password Confirm must match"}</p>
+                <p>{formState.password === formState.confirmPassword ? "" : "Password and Password Confirm must match"}</p>
                 <br/>
                 <input type="submit" value="Submit"/>
             </form>
