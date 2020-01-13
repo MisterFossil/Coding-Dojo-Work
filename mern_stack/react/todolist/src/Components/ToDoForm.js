@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 const ToDoForm = props => {
     const [ state, setState ] = useState({
         activity: "",
-        completed: false,
-        deleted: false,
         tasks: [],
     })
     const onChangeHandler = e => {
@@ -16,6 +14,8 @@ const ToDoForm = props => {
     }
     // changing my task to complete when the checkbox is toggled
     const onTaskComplete = e => {
+        // console.log(i);
+        console.log(e);
         e.preventDefault();
         setState({
             ...state,
@@ -27,17 +27,16 @@ const ToDoForm = props => {
         e.preventDefault();
         const taskToAdd = {
             activity: state.activity,
-            completed: state.completed,
-            deleted: state.deleted,
+            isCompleted: false,
         };
         const arrayToUpdate = [...state.tasks];
         arrayToUpdate.push(taskToAdd);
+        console.log(state);
         setState({
             ...state,
             activity: "",
             tasks: arrayToUpdate,
         })
-        console.log(state);
     }
     return (
         <>

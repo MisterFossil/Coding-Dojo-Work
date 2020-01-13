@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ToDoForm from './Components/ToDoForm';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
