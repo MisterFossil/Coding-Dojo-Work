@@ -1,54 +1,56 @@
 import React, { useState } from 'react';
+
 const ToDoForm = props => {
-    const [ state, setState ] = useState({
-        activity: "",
-        tasks: [],
-    })
-    const onChangeHandler = e => {
+    // Setting the activities in state
+    const [ activity, setActivity ] = useState("");
+    // Setting if the activity has been completed
+    const [ isComplete, setIsComplete ] = useState(false);
+    // setting a task list to contain the text from a task and whether or not its been completed
+    const [ taskList, setTaskList ] = useState([]);
+
+
+    // Add the task from the form to the task list
+    const addTaskToList = e => {
         e.preventDefault();
-        setState({
-            ...state,
-            [e.target.name]: e.target.value,
-            
-        })
+        let tempTasks = [...taskList];
+        tempTasks.push({todo:activity, completed:isComplete})
+        setTaskList(tempTasks);
+        setActivity("");
     }
-    // changing my task to complete when the checkbox is toggled
-    const onTaskComplete = e => {
-        // console.log(i);
-        console.log(e);
-        e.preventDefault();
-        setState({
-            ...state,
-            completed: !state.completed
-        })
-        console.log(state);
+
+    // Delete a task from the list
+    const removeTask = i => {
+        let tempTasks = [...taskList];
+        tempTasks.splice(i,1);
+        setTaskList(tempTasks);
     }
-    const onSubmitHandler = e => {
-        e.preventDefault();
-        const taskToAdd = {
-            activity: state.activity,
-            isCompleted: false,
-        };
-        const arrayToUpdate = [...state.tasks];
-        arrayToUpdate.push(taskToAdd);
-        console.log(state);
-        setState({
-            ...state,
-            activity: "",
-            tasks: arrayToUpdate,
-        })
-    }
+
+    // Mark a task complete/incomplete
+    const toggleTask = i => {
+        let tempTasks = [...taskList]
+        tempTasks[i].completed = !tempTasks[i].completed;
+        setTaskList(tempTasks);
+    }  
+    
     return (
         <>
             <div className="row">
                 <div className="col-6">
-                    <form onSubmit={onSubmitHandler}>
+                    <form onSubmit={addTaskToList}>
                         <div className="form-entry">
                             <label>Task:</label>
-                            <input type="text" className="form-control" name="activity" onChange={onChangeHandler} value={state.activity}/>
+                            <input 
+                                type="text" 
+                                className="form-control" 
+                                name="activity" 
+                                onChange={e => setActivity(e.target.value)} 
+                                value={activity}/>
                         </div>
                         <div className="form-entry">
-                            <input type="submit" value="Add" className="btn btn-outline-dark m-2 " />
+                            <input 
+                                type="submit" 
+                                value="Add" 
+                                className="btn btn-outline-dark m-2 " />
                         </div>
                     </form>
                 </div>
@@ -65,28 +67,26 @@ const ToDoForm = props => {
                         </thead>
                         <tbody>
                             {
-                                state.tasks.map( (task, i) => 
+                                taskList.map( (task, i) => 
                                     <tr key={i}>
-                                        <td>{task.activity}</td>
                                         <td>
-                                            
-                                            <input 
-                                                type="checkbox" 
-                                                name="completed" 
-                                                onClick={onTaskComplete}
-                                                className="form-control"
-                                                defaultChecked={task.completed}
-                                                
-                                            />
+                                            {task.completed ?
+                                                <p className="strike">{task.todo}</p> :
+                                                <p>{task.todo}</p>
+                                            }
                                         </td>
-                                        <td>{state.completed ? "Delete?" : "JUST DO IT"}</td>
+                                        <td>
+                                            {task.completed ? 
+                                                <p onClick={ e => toggleTask(i) }>Not Done?</p> : 
+                                                <p onClick={ e => toggleTask(i) }>Complete Task</p>
+                                            }
+                                        </td>
+                                        <td>{task.completed ? <p onClick={ e => removeTask(i) } className="font-weight-bold">DELETE</p> : "JUST DO IT"}</td>
                                     </tr>
-
                                 )
                             }
                         </tbody>
                     </table>
-                    <input type="checkbox" name="randoBox" id="" defaultChecked={!state.completed}/>
                 </div>
             </div>
         </>

@@ -22,13 +22,22 @@ const App = props => {
 
   console.log(personState, otherState);
 
-  const switchNameHandler = () => {
+   const switchNameHandler = (newName, newAge) => {
     // console.log('Was Clicked');
     setPersonState({
-      ...personState,
       persons: [
-        {name: "Jonathan", age: 34},
+        {name: newName, age: newAge},
         {name: "Erik", age: 35},
+        {name: "Patrick", age: 34},
+      ],
+    })
+  }
+
+  const nameChangedHandler = e => {
+    setPersonState({
+      persons: [
+        {name: 'Max', age: 28},
+        {name: e.target.value, age: 35},
         {name: "Patrick", age: 34},
       ],
     })
@@ -37,12 +46,23 @@ const App = props => {
   return (
     <div className="App">
       <h1>Hi, I'm a React App</h1>
-      <button onClick={switchNameHandler}>Switch Name</button>
-      <Person name={personState.persons[0].name} age={personState.persons[0].age} />
-      <Person name={personState.persons[1].name} age={personState.persons[1].age}>
+      <button onClick={() => switchNameHandler("Charity", 62)}>Switch Name</button>
+      <Person 
+        name={personState.persons[0].name} 
+        age={personState.persons[0].age} 
+      />
+      <Person 
+        name={personState.persons[1].name} 
+        age={personState.persons[1].age}
+        propClick={() => switchNameHandler("Rebecca", 25)}
+        changed={nameChangedHandler}
+      >
         My hobbies: Racing
       </Person>
-      <Person name={personState.persons[2].name} age={personState.persons[2].age}/>
+      <Person 
+        name={personState.persons[2].name} 
+        age={personState.persons[2].age}
+      />
     </div>
   );
 }
