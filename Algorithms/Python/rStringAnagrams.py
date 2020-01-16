@@ -7,12 +7,15 @@
 # substring needs to keep getting bigger until it equals the same length as the original string
 
 
-def allAna(myString,inc=0,sub='',ana=''):
-    if inc == len(myString):
+def allAna(myString,inc=0,sub=''):
+    if len(sub) == len(myString):
         return [sub]
-    sub = list(myString)
-    print(sub)
-    for x in range(len(sub)):
+    else:
+        # takes what's in the substring and you need to call the function enough times
+        for x in range(len(myString)):
+            sub = sub + myString[x]
+            print(sub)
+            return allAna(myString,inc + x,sub) + allAna(myString, inc, sub)
         
 
 print(allAna('lim'))
