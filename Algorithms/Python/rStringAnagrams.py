@@ -8,14 +8,18 @@
 
 
 def allAna(myString,inc=0,sub=''):
-    if len(sub) == len(myString):
+    if inc == len(myString):
         return [sub]
     else:
         # takes what's in the substring and you need to call the function enough times
-        for x in range(len(myString)):
-            sub = sub + myString[x]
+        for inc in range(len(myString)):
+            sub += myString[:inc+1]
             print(sub)
-            return allAna(myString,inc + x,sub) + allAna(myString, inc, sub)
+            return allAna(myString,inc + 1,sub)
         
 
 print(allAna('lim'))
+
+stri = 'hello'
+sStri = stri[2:]
+print(sStri)
