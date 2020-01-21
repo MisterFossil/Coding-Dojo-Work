@@ -1,35 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Link } from '@reach/router';
 
 const ProductList = props => {
-    const [ products, setProducts ] = useState([]);  
-  
-    useEffect( () => {
-      axios.get("http://localhost:8000/api/products")
-      .then(res => setProducts(res.data))
-      .catch(err => console.log(err));
-    }, []);
-  
+
     return (
       <>
         <div className="row mt-3">
           <div className="col">
-            <h1>ProductDB</h1>
-            <table className="table table-striped">
-              <thead>
+            <h1>Product Manager Product List</h1>
+            <table className="table table-striped table-bordered">
+              <thead className="thead-dark">
                 <tr>
                   <th>Title</th>
                   <th>Price</th>
                   <th>Description</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {
-                  products.map(product => 
+                  props.products.map(product => 
                     <tr key={product._id}>
-                      <td>{product.title}</td>
+                      <td> <Link to={product._id}>{product.title}</Link></td>
                       <td>{product.price}</td>
                       <td>{product.description}</td>
+                      <td>Edit | Delete</td>
                     </tr>                  
                   )
                 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const ProductTable = props => {
+const ProductForm = props => {
 
     const [ title, setTitle ] = useState([]);
     const [ price, setPrice ] = useState([]);
@@ -9,13 +9,15 @@ const ProductTable = props => {
 
     const onSubmitHandler = event => {
         event.preventDefault();
-        axios.post('http://localhost:8000/api/products', {
+        axios.post('http://localhost:8000/api/products/create', {
             title,
             price,
             description
         })
             .then(res=>console.log(res))
             .catch(err=>console.log(err))
+
+        
     }
 
     return (
@@ -44,4 +46,4 @@ const ProductTable = props => {
     );
 }
 
-export default ProductTable;
+export default ProductForm;

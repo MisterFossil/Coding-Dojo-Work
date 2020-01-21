@@ -30,6 +30,13 @@ class ProductsController {
             .then(() => res.json({msg: "product created"}))
             .catch(err => res.json(err));
     }
+
+    getProduct(req,res) {
+        // console.log("REQUEST" + req.params.id);
+        Product.findOne({_id:req.params.id})
+            .then(product => res.json(product))
+            .catch(err => res.json(err));
+    }
     
 }
 
