@@ -33,15 +33,15 @@ class JokesController {
     }
 
     // Update existing joke
-    updateExistingJoke(req,res) {
-        Joke.findOneAndUpdate({_id:req.params.id}, req.body, {new: true})
+    updateJoke(req,res) {
+        Joke.updateOne({_id:req.params.id}, req.body)
             .then(updatedJoke => res.json({joke: updatedJoke}))
             .catch(err => res.json({message: "Something went wrong", error: err}));
 
     }
 
     // Delete a joke
-    deleteExistingJoke(req,res) {
+    deleteJoke(req,res) {
         Joke.deleteOne({ _id: req.params.id })
             .then(result => res.json({result: result}))
             .catch(err => res.json({message: "Something went wrong", error: err}));
@@ -55,15 +55,6 @@ class JokesController {
             .then(joke => res.json(joke))
             .catch(err => res.json(err));
     }
-
-    updateJoke(req,res){
-        Joke.updateOne(
-            {setup: req}
-        )
-        .then(joke => res.json(joke))
-        .catch(err => res.json(err));
-    }
-
 }
 
 module.exports = new JokesController();
