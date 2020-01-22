@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Detail = props => {
-    const [ product, setProduct ] = useState([]);
+    const [ product, setProduct ] = useState({});
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/products/details/" + props.id)

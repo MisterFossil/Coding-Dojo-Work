@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ProductList from './ProductList';
 
 const ProductForm = props => {
 
     const [ title, setTitle ] = useState([]);
     const [ price, setPrice ] = useState([]);
     const [ description, setDescription ] = useState([]);  
+    const [ products, setProducts ] = useState([]);
 
     const onSubmitHandler = event => {
         event.preventDefault();
@@ -15,10 +17,14 @@ const ProductForm = props => {
             description
         })
             .then(res=>console.log(res))
-            .catch(err=>console.log(err))
-
-        
+            .catch(err=>console.log(err))    
     }
+
+    useEffect( () => {
+        axios.get("http://localhost:8000/api/products/all")
+        .then(res => setProducts(res.data))
+        .catch(err => console.log(err));
+      }, [onSubmitHandler]);
 
     return (
         <>
@@ -42,6 +48,7 @@ const ProductForm = props => {
                     </form>
                 </div>
             </div>
+            <ProductList products={products} />
         </>
     );
 }
