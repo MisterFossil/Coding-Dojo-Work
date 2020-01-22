@@ -33,9 +33,22 @@ class ProductsController {
 
     getProduct(req,res) {
         // console.log("REQUEST" + req.params.id);
-        Product.findOne({_id:req.params.id})
+        Product.findOne({_id: req.params._id})
             .then(product => res.json(product))
             .catch(err => res.json(err));
+    }
+
+    updateProduct(req,res) {
+        // console.log("REQUEST" + req.params.id);
+        Product.updateOne({_id: req.params._id}, req.body)
+            .then(updatedProduct => res.json(updatedProduct))
+            .catch(err => res.json(err));
+    }
+
+    deleteProduct(req,res) {
+        Product.deleteOne({_id: req.params._id})
+            .then(delConf => res.json(delConf))
+            .catch(err => res.json(err))
     }
     
 }

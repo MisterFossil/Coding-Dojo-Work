@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import ProductList from './ProductList';
 
@@ -7,11 +7,13 @@ const ProductForm = props => {
     const [ title, setTitle ] = useState([]);
     const [ price, setPrice ] = useState([]);
     const [ description, setDescription ] = useState([]);  
-    const [ products, setProducts ] = useState([]);
+    const [ updateList, setUpdateList ] = useState(true);
+
 
     const onSubmitHandler = event => {
         event.preventDefault();
-        axios.post('http://localhost:8000/api/products/create', {
+        setUpdateList(!updateList);
+        axios.post('http://localhost:8000/api/products', {
             title,
             price,
             description
@@ -19,12 +21,6 @@ const ProductForm = props => {
             .then(res=>console.log(res))
             .catch(err=>console.log(err))    
     }
-
-    useEffect( () => {
-        axios.get("http://localhost:8000/api/products/all")
-        .then(res => setProducts(res.data))
-        .catch(err => console.log(err));
-      }, [onSubmitHandler]);
 
     return (
         <>
@@ -48,7 +44,7 @@ const ProductForm = props => {
                     </form>
                 </div>
             </div>
-            <ProductList products={products} />
+            <ProductList updated={updateList} />
         </>
     );
 }
