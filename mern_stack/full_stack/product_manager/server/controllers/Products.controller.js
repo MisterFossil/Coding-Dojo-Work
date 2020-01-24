@@ -40,7 +40,7 @@ class ProductsController {
 
     updateProduct(req,res) {
         // console.log("REQUEST" + req.params.id);
-        Product.updateOne({_id: req.params._id}, req.body)
+        Product.updateOne({_id: req.params._id}, req.body, {runValidators: true})
             .then(updatedProduct => res.json(updatedProduct))
             .catch(err => res.json(err));
     }
