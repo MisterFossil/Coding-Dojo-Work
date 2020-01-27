@@ -10,7 +10,8 @@ const AllNinja = props => {
         axios.get("http://localhost:8000/api/ninjas")
           .then(res => {
               setNinjaList(res.data);
-              setNinFilter(res.data);})
+              setNinFilter(res.data);
+            })
           .catch(err => console.log(err));
       }, []);
 

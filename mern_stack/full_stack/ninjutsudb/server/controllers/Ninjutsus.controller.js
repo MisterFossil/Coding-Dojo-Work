@@ -16,7 +16,7 @@ class NinjutsusController {
     }
 
     allNinjas(req,res) {
-        Ninjutsu.find({}).sort({'ninjutsu': -1})
+        Ninjutsu.find({}).sort({"ninjutsu":1}).exec()
         .then(nin => res.json(nin))
         .catch(err => res.json(err));
     }
