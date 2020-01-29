@@ -6,20 +6,16 @@
 # then the second letter in the list all the way down to the bottom
 # substring needs to keep getting bigger until it equals the same length as the original string
 
+# this is in order substrings recursive, there for ideas possibly
+def allAna(myString):
+    results = []
+    def helper(s,i):
+        if len(myString) == i:
+            results.append(s)
+        else:
+            helper(s+myString[i], i+1)
+            helper(s,i+1)
+    helper("",0)
+    return results
 
-def allAna(myString,inc=0,sub=''):
-    if inc == len(myString):
-        return [sub]
-    else:
-        # takes what's in the substring and you need to call the function enough times
-        for inc in range(len(myString)):
-            sub += myString[:inc+1]
-            print(sub)
-            return allAna(myString,inc + 1,sub)
-        
-
-print(allAna('lim'))
-
-stri = 'hello'
-sStri = stri[2:]
-print(sStri)
+print(allAna("lim"))
